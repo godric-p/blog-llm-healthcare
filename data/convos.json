@@ -1,325 +1,243 @@
 {
     "0": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_8. I'm calling because I've been experiencing nausea for the past week and I wanted to discuss it with you.",
-                            "response": "Provider: Hello, thank you for reaching out. I understand that you've been experiencing nausea for the past week. I see from your records that you are an 80-year-old female with a history of Rheumatoid arthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about the nausea? For example, is it constant or does it come and go? Are there any specific times of the day when it's worse?"
-                        },
-                        {
-                            "input": "Patient: Thank you for your response. The nausea comes and goes throughout the day. It's not constant, but it does happen multiple times a day. I haven't noticed any specific times when it's worse, it seems to be random.",
-                            "response": "Provider: I appreciate you sharing these details. It's helpful to know that your nausea is not constant but occurs multiple times a day and seems to be random. This information is important for understanding your situation better. Are there any other symptoms accompanying the nausea?"
-                        },
-                        {
-                            "input": "Patient: Yes, along with the nausea, I have also been experiencing occasional dizziness and loss of appetite.",
-                            "response": "Provider: Thank you for sharing that information. It's important to note that you're also experiencing occasional dizziness and a loss of appetite along with the nausea. I'm here to support you and I understand that these symptoms can be concerning. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your symptoms. Please take care and we will be in touch soon with more information about your appointment."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_8. I'm calling because I've been experiencing nausea for the past week and I wanted to discuss it with you.",
+                "response": "Provider: Hello, thank you for reaching out. I understand that you've been experiencing nausea for the past week. I see from your records that you are an 80-year-old female with a history of Rheumatoid arthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about the nausea? For example, is it constant or does it come and go? Are there any specific times of the day when it's worse?"
+            },
+            {
+                "input": "Patient: Thank you for your response. The nausea comes and goes throughout the day. It's not constant, but it does happen multiple times a day. I haven't noticed any specific times when it's worse, it seems to be random.",
+                "response": "Provider: I appreciate you sharing these details. It's helpful to know that your nausea is not constant but occurs multiple times a day and seems to be random. This information is important for understanding your situation better. Are there any other symptoms accompanying the nausea?"
+            },
+            {
+                "input": "Patient: Yes, along with the nausea, I have also been experiencing occasional dizziness and loss of appetite.",
+                "response": "Provider: Thank you for sharing that information. It's important to note that you're also experiencing occasional dizziness and a loss of appetite along with the nausea. I'm here to support you and I understand that these symptoms can be concerning. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your symptoms. Please take care and we will be in touch soon with more information about your appointment."
             }
-        }
+        ]
     },
     "1": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_4 and I'm calling because I have been experiencing a severe headache for the past 2 days.",
-                            "response": "Provider: Hello, I understand that you're experiencing a severe headache for the past 2 days. I see from your records that you're a 65-year-old female with a history of depressive disorder. I'm here to listen and gather information about your symptoms. Can you tell me more about your headache? For example, is it in a specific area of your head or all over?"
-                        },
-                        {
-                            "input": "Patient: The headache is all over my head. It feels like a constant throbbing pain that is really intense.",
-                            "response": "Provider: I'm sorry to hear that you're experiencing such discomfort. It sounds like you're dealing with a constant, intense, throbbing pain that is all over your head. This information is helpful in understanding what you're going through. Is there anything else you'd like to share about your symptoms or how you're feeling overall?"
-                        },
-                        {
-                            "input": "Patient: Besides the headache, I've been feeling a bit fatigued and have had trouble concentrating. Overall, I'm feeling quite drained and it's been difficult to go about my daily activities.",
-                            "response": "Provider: I understand that you're not only dealing with a severe headache, but also fatigue and difficulty concentrating. It sounds like these symptoms are significantly impacting your daily activities and overall well-being. I'm really sorry to hear that you're feeling this way. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your symptoms and provide appropriate care. Please take care and rest as much as you can until your appointment."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_4 and I'm calling because I have been experiencing a severe headache for the past 2 days.",
+                "response": "Provider: Hello, I understand that you're experiencing a severe headache for the past 2 days. I see from your records that you're a 65-year-old female with a history of depressive disorder. I'm here to listen and gather information about your symptoms. Can you tell me more about your headache? For example, is it in a specific area of your head or all over?"
+            },
+            {
+                "input": "Patient: The headache is all over my head. It feels like a constant throbbing pain that is really intense.",
+                "response": "Provider: I'm sorry to hear that you're experiencing such discomfort. It sounds like you're dealing with a constant, intense, throbbing pain that is all over your head. This information is helpful in understanding what you're going through. Is there anything else you'd like to share about your symptoms or how you're feeling overall?"
+            },
+            {
+                "input": "Patient: Besides the headache, I've been feeling a bit fatigued and have had trouble concentrating. Overall, I'm feeling quite drained and it's been difficult to go about my daily activities.",
+                "response": "Provider: I understand that you're not only dealing with a severe headache, but also fatigue and difficulty concentrating. It sounds like these symptoms are significantly impacting your daily activities and overall well-being. I'm really sorry to hear that you're feeling this way. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your symptoms and provide appropriate care. Please take care and rest as much as you can until your appointment."
             }
-        }
+        ]
     },
     "2": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_7. I'm calling because I've been experiencing chest pain for the past day and I wanted to discuss it with you.",
-                            "response": "Provider: Hello, I understand you're experiencing chest pain and it's causing you concern. I see from your records that you're a 50-year-old male with a history of anxiety disorder. Can you tell me a bit more about the chest pain? When did it start? Is it constant or does it come and go?"
-                        },
-                        {
-                            "input": "Patient: Yes, the chest pain started about a day ago. It's not constant, it comes and goes.",
-                            "response": "Provider: I see, so the chest pain started a day ago and it's not constant but comes and goes. Can you describe the pain for me? Is it sharp, dull, burning, or pressure-like? And is there anything that seems to trigger it or make it worse?"
-                        },
-                        {
-                            "input": "Patient: The pain feels like a dull ache and sometimes it feels like pressure on my chest. I haven't noticed any specific triggers or things that make it worse.",
-                            "response": "Provider: Thank you for sharing these details. It's important to understand that chest pain can have many causes and it's crucial to get it checked out. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please make sure to share all the details you've told me today during your appointment."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_7. I'm calling because I've been experiencing chest pain for the past day and I wanted to discuss it with you.",
+                "response": "Provider: Hello, I understand you're experiencing chest pain and it's causing you concern. I see from your records that you're a 50-year-old male with a history of anxiety disorder. Can you tell me a bit more about the chest pain? When did it start? Is it constant or does it come and go?"
+            },
+            {
+                "input": "Patient: Yes, the chest pain started about a day ago. It's not constant, it comes and goes.",
+                "response": "Provider: I see, so the chest pain started a day ago and it's not constant but comes and goes. Can you describe the pain for me? Is it sharp, dull, burning, or pressure-like? And is there anything that seems to trigger it or make it worse?"
+            },
+            {
+                "input": "Patient: The pain feels like a dull ache and sometimes it feels like pressure on my chest. I haven't noticed any specific triggers or things that make it worse.",
+                "response": "Provider: Thank you for sharing these details. It's important to understand that chest pain can have many causes and it's crucial to get it checked out. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please make sure to share all the details you've told me today during your appointment."
             }
-        }
+        ]
     },
     "3": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_3 and I'm calling because I have been experiencing a headache for the past 2 days.",
-                            "response": "Provider: Hello, I understand you're experiencing a headache for the past 2 days. I see from your records that you're a 30-year-old male with patient ID pid_3. I'm here to listen and gather information about your symptoms. Can you tell me more about your headache? For example, is it constant or does it come and go? And have you noticed anything that makes it better or worse?"
-                        },
-                        {
-                            "input": "Patient: The headache has been constant for the past 2 days. It doesn't come and go. I haven't noticed anything specific that makes it better or worse. It's just been there consistently.",
-                            "response": "Provider: I understand that your headache has been constant and consistent for the past 2 days, with no specific triggers or relief measures identified. This information is helpful. Can you describe the type of pain you're experiencing? Is it a throbbing, sharp, or dull pain? And is the pain localized to a specific area of your head or is it all over?"
-                        },
-                        {
-                            "input": "Patient: The pain I'm experiencing is more of a dull ache. It's not throbbing or sharp. As for the location, it feels like the pain is all over my head, rather than being localized to a specific area.",
-                            "response": "Provider: Thank you for providing those details. It's helpful to know that you're experiencing a dull ache that seems to be all over your head. I understand how uncomfortable you must be feeling right now. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please remember, it's important to seek immediate medical attention if your symptoms worsen or if you experience any new symptoms."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_3 and I'm calling because I have been experiencing a headache for the past 2 days.",
+                "response": "Provider: Hello, I understand you're experiencing a headache for the past 2 days. I see from your records that you're a 30-year-old male with patient ID pid_3. I'm here to listen and gather information about your symptoms. Can you tell me more about your headache? For example, is it constant or does it come and go? And have you noticed anything that makes it better or worse?"
+            },
+            {
+                "input": "Patient: The headache has been constant for the past 2 days. It doesn't come and go. I haven't noticed anything specific that makes it better or worse. It's just been there consistently.",
+                "response": "Provider: I understand that your headache has been constant and consistent for the past 2 days, with no specific triggers or relief measures identified. This information is helpful. Can you describe the type of pain you're experiencing? Is it a throbbing, sharp, or dull pain? And is the pain localized to a specific area of your head or is it all over?"
+            },
+            {
+                "input": "Patient: The pain I'm experiencing is more of a dull ache. It's not throbbing or sharp. As for the location, it feels like the pain is all over my head, rather than being localized to a specific area.",
+                "response": "Provider: Thank you for providing those details. It's helpful to know that you're experiencing a dull ache that seems to be all over your head. I understand how uncomfortable you must be feeling right now. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please remember, it's important to seek immediate medical attention if your symptoms worsen or if you experience any new symptoms."
             }
-        }
+        ]
     },
     "4": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_5. I'm calling because I've been experiencing chest pain for the past hour and it's of moderate severity.",
-                            "response": "Provider: Hello, I understand that you're experiencing chest pain of moderate severity for the past hour. I see from your records that you're a 70-year-old male with a history of Osteoarthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about the chest pain? For example, is it constant or does it come and go?"
-                        },
-                        {
-                            "input": "Patient: The chest pain is constant, it hasn't gone away since it started an hour ago.",
-                            "response": "Provider: I see, so the chest pain has been constant for the past hour. That's important information. Can you describe the nature of the pain? Is it sharp, dull, burning, or pressure-like? And is the pain localized to one area of your chest or does it spread anywhere else?"
-                        },
-                        {
-                            "input": "Patient: The pain feels like a dull ache and it's mostly localized to the center of my chest.",
-                            "response": "Provider: Thank you for sharing that information. It's helpful to know that the pain is a dull ache and is localized to the center of your chest. I'm going to make sure this information is noted in your records. It's important that we get you in to see a provider who can further evaluate your symptoms. I will arrange an appointment for you."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_5. I'm calling because I've been experiencing chest pain for the past hour and it's of moderate severity.",
+                "response": "Provider: Hello, I understand that you're experiencing chest pain of moderate severity for the past hour. I see from your records that you're a 70-year-old male with a history of Osteoarthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about the chest pain? For example, is it constant or does it come and go?"
+            },
+            {
+                "input": "Patient: The chest pain is constant, it hasn't gone away since it started an hour ago.",
+                "response": "Provider: I see, so the chest pain has been constant for the past hour. That's important information. Can you describe the nature of the pain? Is it sharp, dull, burning, or pressure-like? And is the pain localized to one area of your chest or does it spread anywhere else?"
+            },
+            {
+                "input": "Patient: The pain feels like a dull ache and it's mostly localized to the center of my chest.",
+                "response": "Provider: Thank you for sharing that information. It's helpful to know that the pain is a dull ache and is localized to the center of your chest. I'm going to make sure this information is noted in your records. It's important that we get you in to see a provider who can further evaluate your symptoms. I will arrange an appointment for you."
             }
-        }
+        ]
     },
     "5": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_10. I'm calling because I've been experiencing digestive issues for the past day.",
-                            "response": "Provider: Hello, I understand you're experiencing some digestive issues. I see here that you're a 60-year-old female with the patient ID pid_10. Could you please tell me more about the symptoms you're experiencing? Remember, I'm here to help."
-                        },
-                        {
-                            "input": "Patient: Yes, of course. I've been having mild digestive issues for the past day. I've been experiencing some bloating, occasional stomach cramps, and a bit of indigestion.",
-                            "response": "Provider: I see, thank you for sharing that information. It sounds like you've been dealing with bloating, occasional stomach cramps, and some indigestion over the past day. I'm here to listen and gather information about your symptoms. Is there anything else you would like to share about your current condition?"
-                        },
-                        {
-                            "input": "Patient: No, those are the main symptoms I've been experiencing. I haven't noticed any other changes or issues with my digestion.",
-                            "response": "Provider: Thank you for providing those details. It's important to keep track of these symptoms. I understand that bloating, stomach cramps, and indigestion are the main issues you've been experiencing. I will make sure to note all of this information down. Let's go ahead and schedule an appointment with a healthcare provider who can further assist you."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_10. I'm calling because I've been experiencing digestive issues for the past day.",
+                "response": "Provider: Hello, I understand you're experiencing some digestive issues. I see here that you're a 60-year-old female with the patient ID pid_10. Could you please tell me more about the symptoms you're experiencing? Remember, I'm here to help."
+            },
+            {
+                "input": "Patient: Yes, of course. I've been having mild digestive issues for the past day. I've been experiencing some bloating, occasional stomach cramps, and a bit of indigestion.",
+                "response": "Provider: I see, thank you for sharing that information. It sounds like you've been dealing with bloating, occasional stomach cramps, and some indigestion over the past day. I'm here to listen and gather information about your symptoms. Is there anything else you would like to share about your current condition?"
+            },
+            {
+                "input": "Patient: No, those are the main symptoms I've been experiencing. I haven't noticed any other changes or issues with my digestion.",
+                "response": "Provider: Thank you for providing those details. It's important to keep track of these symptoms. I understand that bloating, stomach cramps, and indigestion are the main issues you've been experiencing. I will make sure to note all of this information down. Let's go ahead and schedule an appointment with a healthcare provider who can further assist you."
             }
-        }
+        ]
     },
     "6": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_3. I'm calling because I've been experiencing anxiety for the past week and I wanted to discuss it with you.",
-                            "response": "Provider: Hello, I understand you're feeling anxious and it's been going on for about a week now. I'm here to listen and help you through this. Could you tell me a bit more about what you're experiencing? Remember, it's important to share as much as you can so we can understand your situation better."
-                        },
-                        {
-                            "input": "Patient: Thank you for your understanding. Lately, I've been feeling a constant sense of worry and unease. It's like my mind is always racing, and I find it difficult to relax or concentrate on anything. I've also noticed that I've been having trouble sleeping and have been feeling restless. These symptoms have been affecting my daily life and I'm concerned about it.",
-                            "response": "Provider: I'm really sorry to hear that you're feeling this way, but I'm glad you reached out to share what you're going through. It sounds like you're experiencing a lot of worry and restlessness, and it's affecting your sleep and daily life. It's important to remember that help is available, and you're not alone. Can you tell me more about when these feelings started?"
-                        },
-                        {
-                            "input": "Patient: Thank you for your support. These feelings of anxiety started about a week ago. I'm not exactly sure what triggered it, but I've been under a lot of stress lately with work and personal responsibilities. It feels like everything has been piling up and I'm finding it hard to cope with it all.",
-                            "response": "Provider: I appreciate you sharing this with me. It sounds like you've been under a significant amount of stress recently, and it's been difficult to manage. It's completely understandable to feel overwhelmed in such situations. I'm here to support you. Let's schedule an appointment with a healthcare provider who can help you navigate through this. You're not alone, and there are professionals who can provide the help that you need."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_3. I'm calling because I've been experiencing anxiety for the past week and I wanted to discuss it with you.",
+                "response": "Provider: Hello, I understand you're feeling anxious and it's been going on for about a week now. I'm here to listen and help you through this. Could you tell me a bit more about what you're experiencing? Remember, it's important to share as much as you can so we can understand your situation better."
+            },
+            {
+                "input": "Patient: Thank you for your understanding. Lately, I've been feeling a constant sense of worry and unease. It's like my mind is always racing, and I find it difficult to relax or concentrate on anything. I've also noticed that I've been having trouble sleeping and have been feeling restless. These symptoms have been affecting my daily life and I'm concerned about it.",
+                "response": "Provider: I'm really sorry to hear that you're feeling this way, but I'm glad you reached out to share what you're going through. It sounds like you're experiencing a lot of worry and restlessness, and it's affecting your sleep and daily life. It's important to remember that help is available, and you're not alone. Can you tell me more about when these feelings started?"
+            },
+            {
+                "input": "Patient: Thank you for your support. These feelings of anxiety started about a week ago. I'm not exactly sure what triggered it, but I've been under a lot of stress lately with work and personal responsibilities. It feels like everything has been piling up and I'm finding it hard to cope with it all.",
+                "response": "Provider: I appreciate you sharing this with me. It sounds like you've been under a significant amount of stress recently, and it's been difficult to manage. It's completely understandable to feel overwhelmed in such situations. I'm here to support you. Let's schedule an appointment with a healthcare provider who can help you navigate through this. You're not alone, and there are professionals who can provide the help that you need."
             }
-        }
+        ]
     },
     "7": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_6 and I'm calling because I've been experiencing shortness of breath for the past 4 weeks.",
-                            "response": "Provider: Hello, I understand that you're experiencing shortness of breath for the past 4 weeks. I see from your records that you're a 75-year-old female with a history of diabetes. I'm here to listen and gather information about your symptoms. Can you tell me more about this shortness of breath? For example, does it happen all the time or only during certain activities?"
-                        },
-                        {
-                            "input": "Patient: Thank you for reviewing my records. The shortness of breath happens mostly during physical activities like walking or climbing stairs. However, I have noticed that it can also occur when I'm at rest, but it's not as frequent.",
-                            "response": "Provider: I appreciate you sharing these details. It's important to note that your shortness of breath occurs mostly during physical activities, but can also happen at rest, though less frequently. This information is very helpful. Is there anything else you've noticed that might be related? Any other symptoms or changes in your overall health?"
-                        },
-                        {
-                            "input": "Patient: Yes, along with the shortness of breath, I have also been experiencing occasional coughing and wheezing. I haven't noticed any significant changes in my overall health, but I do feel more fatigued than usual.",
-                            "response": "Provider: Thank you for sharing that additional information. It's important to note that along with shortness of breath, you've also been experiencing occasional coughing, wheezing, and increased fatigue. I'm going to document all of this information. I think it would be beneficial for you to discuss these symptoms with a healthcare provider in more detail. Let's go ahead and schedule an appointment for you."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_6 and I'm calling because I've been experiencing shortness of breath for the past 4 weeks.",
+                "response": "Provider: Hello, I understand that you're experiencing shortness of breath for the past 4 weeks. I see from your records that you're a 75-year-old female with a history of diabetes. I'm here to listen and gather information about your symptoms. Can you tell me more about this shortness of breath? For example, does it happen all the time or only during certain activities?"
+            },
+            {
+                "input": "Patient: Thank you for reviewing my records. The shortness of breath happens mostly during physical activities like walking or climbing stairs. However, I have noticed that it can also occur when I'm at rest, but it's not as frequent.",
+                "response": "Provider: I appreciate you sharing these details. It's important to note that your shortness of breath occurs mostly during physical activities, but can also happen at rest, though less frequently. This information is very helpful. Is there anything else you've noticed that might be related? Any other symptoms or changes in your overall health?"
+            },
+            {
+                "input": "Patient: Yes, along with the shortness of breath, I have also been experiencing occasional coughing and wheezing. I haven't noticed any significant changes in my overall health, but I do feel more fatigued than usual.",
+                "response": "Provider: Thank you for sharing that additional information. It's important to note that along with shortness of breath, you've also been experiencing occasional coughing, wheezing, and increased fatigue. I'm going to document all of this information. I think it would be beneficial for you to discuss these symptoms with a healthcare provider in more detail. Let's go ahead and schedule an appointment for you."
             }
-        }
+        ]
     },
     "8": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_10. I'm calling because I've been experiencing severe nausea for the past hour.",
-                            "response": "Provider: Hello, I understand you're feeling quite unwell right now with severe nausea. I see from your records that you're a 60-year-old female with patient ID pid_10. I'm here to listen and gather information about your symptoms. Can you tell me more about what you're experiencing?"
-                        },
-                        {
-                            "input": "Patient: Yes, I'm a 60-year-old female with patient ID pid_10. The nausea I'm experiencing is really severe. It started about an hour ago and hasn't gotten any better. It's making me feel really sick and uncomfortable.",
-                            "response": "Provider: I'm really sorry to hear that you're feeling this way. It's important to understand more about this severe nausea you're experiencing. Can you tell me if there are any other symptoms accompanying the nausea? And has anything like this happened before?"
-                        },
-                        {
-                            "input": "Patient: Thank you for your concern. Along with the severe nausea, I haven't noticed any other specific symptoms. This is the first time I've experienced such severe nausea.",
-                            "response": "Provider: I appreciate you sharing this information with me. It's important to take note of new symptoms like this. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please take care and rest as much as you can in the meantime."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_10. I'm calling because I've been experiencing severe nausea for the past hour.",
+                "response": "Provider: Hello, I understand you're feeling quite unwell right now with severe nausea. I see from your records that you're a 60-year-old female with patient ID pid_10. I'm here to listen and gather information about your symptoms. Can you tell me more about what you're experiencing?"
+            },
+            {
+                "input": "Patient: Yes, I'm a 60-year-old female with patient ID pid_10. The nausea I'm experiencing is really severe. It started about an hour ago and hasn't gotten any better. It's making me feel really sick and uncomfortable.",
+                "response": "Provider: I'm really sorry to hear that you're feeling this way. It's important to understand more about this severe nausea you're experiencing. Can you tell me if there are any other symptoms accompanying the nausea? And has anything like this happened before?"
+            },
+            {
+                "input": "Patient: Thank you for your concern. Along with the severe nausea, I haven't noticed any other specific symptoms. This is the first time I've experienced such severe nausea.",
+                "response": "Provider: I appreciate you sharing this information with me. It's important to take note of new symptoms like this. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please take care and rest as much as you can in the meantime."
             }
-        }
+        ]
     },
     "9": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing severe nausea for the past 2 days.",
-                            "response": "Provider: Hello, I understand you're feeling unwell. I see here that you're a 55-year-old male with a history of hypertension, and you've been experiencing severe nausea for the past 2 days. I'm here to listen and gather information about your symptoms. Can you tell me more about your current condition?"
-                        },
-                        {
-                            "input": "Patient: Yes, I've been feeling really sick to my stomach. The nausea is quite severe and it's been going on for the past 2 days. It's been really difficult for me to eat or drink anything without feeling like I'm going to vomit.",
-                            "response": "Provider: I'm really sorry to hear that you're feeling this way. It must be really tough for you. So, to summarize, you're a 55-year-old male with hypertension, and you've been experiencing severe nausea for the past 2 days, which is making it difficult for you to eat or drink. Is there anything else you would like to share about your symptoms or how you're feeling?"
-                        },
-                        {
-                            "input": "Patient: No, that pretty much covers it. The nausea is the main symptom that's bothering me right now. It's making me feel really weak and tired.",
-                            "response": "Provider: I understand how difficult this must be for you, feeling weak and tired due to the severe nausea. As a 55-year-old male with hypertension, it's important that we take these symptoms seriously. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your condition. Please take care and rest as much as you can in the meantime."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing severe nausea for the past 2 days.",
+                "response": "Provider: Hello, I understand you're feeling unwell. I see here that you're a 55-year-old male with a history of hypertension, and you've been experiencing severe nausea for the past 2 days. I'm here to listen and gather information about your symptoms. Can you tell me more about your current condition?"
+            },
+            {
+                "input": "Patient: Yes, I've been feeling really sick to my stomach. The nausea is quite severe and it's been going on for the past 2 days. It's been really difficult for me to eat or drink anything without feeling like I'm going to vomit.",
+                "response": "Provider: I'm really sorry to hear that you're feeling this way. It must be really tough for you. So, to summarize, you're a 55-year-old male with hypertension, and you've been experiencing severe nausea for the past 2 days, which is making it difficult for you to eat or drink. Is there anything else you would like to share about your symptoms or how you're feeling?"
+            },
+            {
+                "input": "Patient: No, that pretty much covers it. The nausea is the main symptom that's bothering me right now. It's making me feel really weak and tired.",
+                "response": "Provider: I understand how difficult this must be for you, feeling weak and tired due to the severe nausea. As a 55-year-old male with hypertension, it's important that we take these symptoms seriously. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your condition. Please take care and rest as much as you can in the meantime."
             }
-        }
+        ]
     },
     "10": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_4. I'm calling because I've been experiencing severe nausea for the past 4 weeks.",
-                            "response": "Provider: Hello, I understand you're feeling unwell with severe nausea for the past 4 weeks. I see from your records that you're a 65-year-old female with a history of depressive disorder. I'm here to listen and gather information about your symptoms. Can you tell me more about your nausea?"
-                        },
-                        {
-                            "input": "Patient: Yes, of course. The nausea I've been experiencing has been quite severe. It's been lasting for about 4 weeks now, and it's been really difficult to manage. It's been affecting my daily activities and making it hard for me to eat properly.",
-                            "response": "Provider: I'm really sorry to hear that you're going through this. It sounds like the nausea is quite severe and is impacting your daily life and eating habits. It's important to keep track of these symptoms. Can you share if there's anything that seems to trigger it or make it worse?"
-                        },
-                        {
-                            "input": "Patient: Thank you for your concern. I haven't noticed any specific triggers for my nausea. It seems to be present throughout the day, regardless of what I eat or do.",
-                            "response": "Provider: I see, it must be really tough to experience constant nausea without any identifiable triggers. It's important that we have this information documented. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please remember, it's crucial to share all these details with them as well."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_4. I'm calling because I've been experiencing severe nausea for the past 4 weeks.",
+                "response": "Provider: Hello, I understand you're feeling unwell with severe nausea for the past 4 weeks. I see from your records that you're a 65-year-old female with a history of depressive disorder. I'm here to listen and gather information about your symptoms. Can you tell me more about your nausea?"
+            },
+            {
+                "input": "Patient: Yes, of course. The nausea I've been experiencing has been quite severe. It's been lasting for about 4 weeks now, and it's been really difficult to manage. It's been affecting my daily activities and making it hard for me to eat properly.",
+                "response": "Provider: I'm really sorry to hear that you're going through this. It sounds like the nausea is quite severe and is impacting your daily life and eating habits. It's important to keep track of these symptoms. Can you share if there's anything that seems to trigger it or make it worse?"
+            },
+            {
+                "input": "Patient: Thank you for your concern. I haven't noticed any specific triggers for my nausea. It seems to be present throughout the day, regardless of what I eat or do.",
+                "response": "Provider: I see, it must be really tough to experience constant nausea without any identifiable triggers. It's important that we have this information documented. I'm going to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Please remember, it's crucial to share all these details with them as well."
             }
-        }
+        ]
     },
     "11": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing shortness of breath for the past 2 days and it's been moderate in severity.",
-                            "response": "Provider: Hello, I understand you're experiencing shortness of breath for the past 2 days and it's been moderate in severity. I see from your records that you're a 55-year-old male with a history of hypertension. I'm here to listen and gather information about your symptoms. Can you tell me more about when you notice this shortness of breath? Is it constant or does it come and go?"
-                        },
-                        {
-                            "input": "Patient: Thank you for reviewing my records. The shortness of breath I've been experiencing comes and goes. It's not constant throughout the day.",
-                            "response": "Provider: I appreciate your clarification. So, you're experiencing shortness of breath that comes and goes, and it's not constant throughout the day. This is important information. Can you tell me if there are any specific activities that trigger this shortness of breath? Also, have you noticed any other symptoms accompanying this?"
-                        },
-                        {
-                            "input": "Patient: Yes, there are certain activities that seem to trigger my shortness of breath, such as climbing stairs or walking uphill. As for other symptoms, I haven't noticed anything else accompanying the shortness of breath.",
-                            "response": "Provider: Thank you for sharing that information. It's helpful to know that activities like climbing stairs or walking uphill seem to trigger your shortness of breath, and that you haven't noticed any other symptoms. This information will be very useful for your healthcare provider. I will arrange an appointment for you to discuss these symptoms further with a healthcare provider. They will be able to provide a more comprehensive evaluation."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing shortness of breath for the past 2 days and it's been moderate in severity.",
+                "response": "Provider: Hello, I understand you're experiencing shortness of breath for the past 2 days and it's been moderate in severity. I see from your records that you're a 55-year-old male with a history of hypertension. I'm here to listen and gather information about your symptoms. Can you tell me more about when you notice this shortness of breath? Is it constant or does it come and go?"
+            },
+            {
+                "input": "Patient: Thank you for reviewing my records. The shortness of breath I've been experiencing comes and goes. It's not constant throughout the day.",
+                "response": "Provider: I appreciate your clarification. So, you're experiencing shortness of breath that comes and goes, and it's not constant throughout the day. This is important information. Can you tell me if there are any specific activities that trigger this shortness of breath? Also, have you noticed any other symptoms accompanying this?"
+            },
+            {
+                "input": "Patient: Yes, there are certain activities that seem to trigger my shortness of breath, such as climbing stairs or walking uphill. As for other symptoms, I haven't noticed anything else accompanying the shortness of breath.",
+                "response": "Provider: Thank you for sharing that information. It's helpful to know that activities like climbing stairs or walking uphill seem to trigger your shortness of breath, and that you haven't noticed any other symptoms. This information will be very useful for your healthcare provider. I will arrange an appointment for you to discuss these symptoms further with a healthcare provider. They will be able to provide a more comprehensive evaluation."
             }
-        }
+        ]
     },
     "12": {
-        "base_conversation": {
-            "base_conversation": {
-                "base_conversation": {
-                    "convo": [
-                        {
-                            "input": "Patient: Hi, my patient ID is pid_5. I'm calling because I have been experiencing a headache for the past hour and it's of moderate severity.",
-                            "response": "Provider: Hello, I understand you're experiencing a headache of moderate severity for the past hour. I see from your records that you're a 70-year-old male with a history of Osteoarthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about your headache? For example, is it in a specific area of your head or all over?"
-                        },
-                        {
-                            "input": "Patient: Yes, the headache is all over my head. It's not localized to a specific area.",
-                            "response": "Provider: I see, thank you for sharing that the headache is generalized and not localized to a specific area. This information is helpful. Is there anything else you've noticed or any other symptoms you're experiencing?"
-                        },
-                        {
-                            "input": "Patient: Yes, along with the headache, I've also been feeling a bit nauseous.",
-                            "response": "Provider: I understand that along with the headache, you're also experiencing some nausea. I appreciate you sharing these symptoms with me. It's important to get these symptoms checked out by a healthcare provider. I will arrange an appointment for you to discuss these symptoms further with a healthcare provider. They will be able to provide a thorough evaluation. Thank you for reaching out and take care."
-                        }
-                    ]
-                }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_5. I'm calling because I have been experiencing a headache for the past hour and it's of moderate severity.",
+                "response": "Provider: Hello, I understand you're experiencing a headache of moderate severity for the past hour. I see from your records that you're a 70-year-old male with a history of Osteoarthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about your headache? For example, is it in a specific area of your head or all over?"
+            },
+            {
+                "input": "Patient: Yes, the headache is all over my head. It's not localized to a specific area.",
+                "response": "Provider: I see, thank you for sharing that the headache is generalized and not localized to a specific area. This information is helpful. Is there anything else you've noticed or any other symptoms you're experiencing?"
+            },
+            {
+                "input": "Patient: Yes, along with the headache, I've also been feeling a bit nauseous.",
+                "response": "Provider: I understand that along with the headache, you're also experiencing some nausea. I appreciate you sharing these symptoms with me. It's important to get these symptoms checked out by a healthcare provider. I will arrange an appointment for you to discuss these symptoms further with a healthcare provider. They will be able to provide a thorough evaluation. Thank you for reaching out and take care."
             }
-        }
+        ]
     },
     "13": {
-        "base_conversation": {
-            "base_conversation": [
-                {
-                    "input": "Patient: Hi, my patient ID is pid_4 and I'm calling because I've been experiencing chest pain for the past 4 weeks.",
-                    "response": "Provider: Hello, I understand that you're experiencing chest pain for the past 4 weeks. I see from your records that you're a 65-year-old female with a history of depressive disorder. I'm here to listen and gather information about your symptoms. Can you tell me more about the chest pain?"
-                },
-                {
-                    "input": "Patient: Yes, of course. The chest pain I've been experiencing is mild in severity. It feels like a dull ache or pressure in the center of my chest. It comes and goes throughout the day, but it's been consistent for the past 4 weeks.",
-                    "response": "Provider: I see, thank you for sharing that. So, you've been experiencing a mild, dull ache or pressure in the center of your chest that comes and goes throughout the day for the past 4 weeks. I understand this must be concerning for you. Is there anything else you've noticed or any other symptoms you've been experiencing?"
-                },
-                {
-                    "input": "Patient: Yes, along with the chest pain, I've also noticed some shortness of breath, especially when I exert myself or climb stairs. I haven't experienced any dizziness or lightheadedness, but sometimes I feel a bit fatigued.",
-                    "response": "Provider: I appreciate you sharing these details. So, along with the chest pain, you've also been experiencing shortness of breath, particularly during exertion or when climbing stairs, and some fatigue, but no dizziness or lightheadedness. I understand how these symptoms can be distressing. I will make sure to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms."
-                }
-            ]
-        }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_4 and I'm calling because I've been experiencing chest pain for the past 4 weeks.",
+                "response": "Provider: Hello, I understand that you're experiencing chest pain for the past 4 weeks. I see from your records that you're a 65-year-old female with a history of depressive disorder. I'm here to listen and gather information about your symptoms. Can you tell me more about the chest pain?"
+            },
+            {
+                "input": "Patient: Yes, of course. The chest pain I've been experiencing is mild in severity. It feels like a dull ache or pressure in the center of my chest. It comes and goes throughout the day, but it's been consistent for the past 4 weeks.",
+                "response": "Provider: I see, thank you for sharing that. So, you've been experiencing a mild, dull ache or pressure in the center of your chest that comes and goes throughout the day for the past 4 weeks. I understand this must be concerning for you. Is there anything else you've noticed or any other symptoms you've been experiencing?"
+            },
+            {
+                "input": "Patient: Yes, along with the chest pain, I've also noticed some shortness of breath, especially when I exert myself or climb stairs. I haven't experienced any dizziness or lightheadedness, but sometimes I feel a bit fatigued.",
+                "response": "Provider: I appreciate you sharing these details. So, along with the chest pain, you've also been experiencing shortness of breath, particularly during exertion or when climbing stairs, and some fatigue, but no dizziness or lightheadedness. I understand how these symptoms can be distressing. I will make sure to schedule an appointment for you with a healthcare provider who can further evaluate your symptoms."
+            }
+        ]
     },
     "14": {
-        "base_conversation": {
-            "base_conversation": [
-                {
-                    "input": "Patient: Hi, my patient ID is pid_1. I'm calling because I've been experiencing a headache for the past week and I wanted to discuss it with you.",
-                    "response": "Provider: Hello, I understand you're experiencing a headache that's been persisting for a week. I see from your records that you're a 45-year-old male with a history of Asthma. I'm here to listen and gather information about your symptoms. Can you tell me more about your headaches?"
-                },
-                {
-                    "input": "Patient: Yes, of course. The headaches I've been having are mild in severity. They usually start in the morning and last throughout the day. The pain is mostly on both sides of my head and it feels like a constant pressure. I haven't noticed any specific triggers for the headaches.",
-                    "response": "Provider: I see, thank you for sharing that information. So, you're experiencing mild headaches that start in the morning and last throughout the day, with a feeling of constant pressure on both sides of your head. You haven't noticed any specific triggers for these headaches. I'm here to help you, and your detailed description is very helpful."
-                },
-                {
-                    "input": "Patient: Thank you for understanding. I appreciate your help in addressing my headaches.",
-                    "response": "Provider: You're welcome. I understand that dealing with these headaches can be challenging. Your well-being is our top priority. I will arrange for you to have an appointment with a healthcare provider who can further assist you. Thank you for reaching out and discussing your symptoms with me."
-                }
-            ]
-        }
+        "base_conversation": [
+            {
+                "input": "Patient: Hi, my patient ID is pid_1. I'm calling because I've been experiencing a headache for the past week and I wanted to discuss it with you.",
+                "response": "Provider: Hello, I understand you're experiencing a headache that's been persisting for a week. I see from your records that you're a 45-year-old male with a history of Asthma. I'm here to listen and gather information about your symptoms. Can you tell me more about your headaches?"
+            },
+            {
+                "input": "Patient: Yes, of course. The headaches I've been having are mild in severity. They usually start in the morning and last throughout the day. The pain is mostly on both sides of my head and it feels like a constant pressure. I haven't noticed any specific triggers for the headaches.",
+                "response": "Provider: I see, thank you for sharing that information. So, you're experiencing mild headaches that start in the morning and last throughout the day, with a feeling of constant pressure on both sides of your head. You haven't noticed any specific triggers for these headaches. I'm here to help you, and your detailed description is very helpful."
+            },
+            {
+                "input": "Patient: Thank you for understanding. I appreciate your help in addressing my headaches.",
+                "response": "Provider: You're welcome. I understand that dealing with these headaches can be challenging. Your well-being is our top priority. I will arrange for you to have an appointment with a healthcare provider who can further assist you. Thank you for reaching out and discussing your symptoms with me."
+            }
+        ]
     },
     "15": {
         "base_conversation": [
