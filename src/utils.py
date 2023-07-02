@@ -2,13 +2,14 @@ import sqlite3
 import pandas as pd
 import random
 import json
+import os
 from termcolor import colored
 from agents import patient_agent, healthcare_agent, sql_agent, gpt
 
 def generate_care_plan_options(filter_preferred=False):
     care_plan_options = {
         "option": [
-            "Schedule a follow-up appointment",
+            "Arrange for cognitive behavioral therapy",
             "Prescribe medication",
             "Refer to a specialist",
             "Order lab tests",
@@ -43,9 +44,13 @@ def generate_care_plan_options(filter_preferred=False):
 
 # intialize database
 def initialize_sqlite():
-    # Create a connection to the database (or create it if it doesn't exist)
-    conn = sqlite3.connect('data/database.db')
 
+    # relative db file path
+    db_dir = os.path.join(os.path.dirname(__file__), '..', 'data/database.db')
+
+    # Create a connection to the database (or create it if it doesn't exist)
+    conn = sqlite3.connect(db_dir)
+    
     # Patient info database
     data = {
         'id': ['pid_1', 'pid_2', 'pid_3', 'pid_4', 'pid_5', 'pid_6', 'pid_7', 'pid_8', 'pid_9', 'pid_10'],
@@ -63,8 +68,12 @@ def initialize_sqlite():
 
 # execute sql query
 def execute_query(query):
-    # Create a connection to the database
-    conn = sqlite3.connect('data/database.db')
+    
+    # relative db file path
+    db_dir = os.path.join(os.path.dirname(__file__), '..', 'data/database.db')
+    
+    # Create a connection to the database (or create it if it doesn't exist)
+    conn = sqlite3.connect(db_dir)
 
     # Create a cursor object to interact with the database
     cursor = conn.cursor()
@@ -103,42 +112,40 @@ def extract_last_response(obj):
     response = obj["conversation"][-2]["response"]
     return response
 
-def simulate_conversation(regen=True):
+def simulate_conversation():
 
-    if regen:
+    # Create patient attributes
+    patient_attr = PatientAttr().metadata
+    first_question =  "Provider: Hi, can you please provide me with your patient ID and the reason you are calling?"
+    
+    print(colored(first_question, 'magenta'))
 
-        # Create patient attributes
-        patient_attr = PatientAttr().metadata
-        first_question =  "Provider: Hi, can you please provide me with your patient ID and the reason you are calling?"
-        
-        print(colored(first_question, 'magenta'))
+    # initialize simulated patient and healthcare worker
+    patient = patient_agent(patient_attributes=patient_attr, await_missing=True, silent=True,llm=gpt(3.5), caching=False)
+    provider = healthcare_agent(await_missing=True, patient_info=None, last_response=0, silent=True,llm=gpt(4), caching=False)
 
-        # initialize simulated patient and healthcare worker
-        patient = patient_agent(patient_attributes=patient_attr, await_missing=True, silent=True,llm=gpt(3.5), caching=False)
-        provider = healthcare_agent(await_missing=True, patient_info=None, last_response=0, silent=True,llm=gpt(4), caching=False)
+    # start conversation
+    patient = patient(input=first_question)
 
-        # start conversation
-        patient = patient(input=first_question)
+    print(colored(extract_last_response(patient), 'cyan'))
 
+    # generate and execute sql query
+    sql_query = sql_agent(input=extract_last_response(patient),llm=gpt(4))
+    patient_info = execute_query(sql_query["query"])
+
+    # run provider agent 
+    provider = provider(input=extract_last_response(patient), patient_info=patient_info, last_response=0)
+
+    print(colored(extract_last_response(provider), 'magenta'))
+
+    # simulate short conversation
+    for i in range(2):
+        patient = patient(input=extract_last_response(provider))
         print(colored(extract_last_response(patient), 'cyan'))
-
-        # generate and execute sql query
-        sql_query = sql_agent(input=extract_last_response(patient),llm=gpt(4))
-        patient_info = execute_query(sql_query["query"])
-
-        # run provider agent 
-        provider = provider(input=extract_last_response(patient), patient_info=patient_info, last_response=0)
-
+        provider = provider(input=extract_last_response(patient),patient_info=None,last_response=i)
         print(colored(extract_last_response(provider), 'magenta'))
 
-        # simulate short conversation
-        for i in range(2):
-            patient = patient(input=extract_last_response(provider))
-            print(colored(extract_last_response(patient), 'cyan'))
-            provider = provider(input=extract_last_response(patient),patient_info=None,last_response=i)
-            print(colored(extract_last_response(provider), 'magenta'))
-
-        result = provider.variables()['conversation']
+    result = provider.variables()['conversation']
 
     return result
 

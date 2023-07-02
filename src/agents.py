@@ -41,7 +41,7 @@ Comment: Remember, answer as a medical patient. Start your utterance with Patien
 # agent to generate sql queries from plain text                         
 sql_agent = guidance('''
 {{#system~}}
-you are a data analyst assistant and an expert in python
+you are a data analyst assistant and an expert in python and sql
 {{~/system}}
                                            
 {{#user~}}
@@ -106,40 +106,59 @@ Please read the following conversation and complete the following tasks. Provide
 form of a python dictionary where the output for each task is returned in separate element. The elements
 include (1) a two sentence summary, (2) a medical note based on the following conversation in the SOAP 
 format and include the relevant billing codes, (3) please also write a summary for the EHR in the HL7 FHIR 
-json format, (4) a proposal derived from {{options}}, and (5) a justification where you think step by step to 
+json format, (4) a proposal derived from {{options}}, and (5) a 1 sentence justification where you think step by step to 
 justify why you selected the proposal. The keys for the python dictionary are "summary", "SOAP", "HL7FHIR", "proposal",
-and "justification". Base conversation: {{base_conversation}}.
-
-Additionally, if available, a history of accepted and rejected proposals (from 4 above) will be provided in
-'validation_history' here :{{validation_history}}. Please use this information to discern the preferences of 
-the validator and generate proposals that are likely to be accepted by the validator. A 1 for 'proposal_accepted' 
-field in 'validation_history' indicates that the original proposal was accepted. A 0 for 'proposal_accepted'
-indicates that the original proposal was rejected. 
+and "justification". Base conversation: {{base_conversation}}. Use double quotes for all property names and values. Ensure
+that the last line ends with a double quote.
 {{~/user}}
                                            
 {{~! Generate the proposal}}
 {{#assistant~}}
-{{gen 'proposal'}}
+{{gen 'proposal' max_tokens=6000}}
 {{~/assistant}}''')
                           
-# example of "3rd party" evaluator agent that is focused only on the HL7 FHIR component
-evaluator_agent = guidance('''
+# example of "3rd party" validator agent that is focused only on the HL7 FHIR component
+hl7fhir_agent = guidance('''
 {{#system~}}
 you are a role playing agent that is playing the role of an expert reviewer for HL7 FHIR specifications
 {{~/system}}
                                            
 {{#user~}}
 Please confirm that the following HL7 FHIR json document is in the correct format and doesn't contain
-any errors. Please provide your output as a python dictionary where the output is returned in separate 
-element with two elements: (1) "error" and (2) "description of error" where the "error" field is a 0 
-if there are no errors and a 1 if errors are detected. 
+errors. Please provide no more than two sentences justifying your conclusion. The HL7 FHIR json document 
+to review is: {{HL7_FHIR}}
+{{~/user}}
+                                           
+{{~! Generate the evaluation}}
+{{#assistant~}}
+{{gen 'hl7_eval'}}
+{{~/assistant}}''')
+                         
+# evaluator agent that learns the preferences from the "human"
+evaluator_agent = guidance('''
+{{#system~}}
+you are the assistant of a medical proffesional who is reviewing the follow up propososal made by
+an agent, and deciding whether or not to the medical proffesional will approave the proposal. You
+will learn the preferences of the medical proffesional based on historical data that will be provided
+to you. 
+{{~/system}}
+                                           
+{{#user~}}
+You will receive a summary of a recent conversation between a provider and a patient along with a follow
+up proposal made by another agent. The input proposal you will be evaluating is here: {{proposal}}. 
+You will review the summary, the proposal, and a record of "validation histories" here: {{val_history}}, which 
+indicates whether or not a given proposal was accepted by the medical proffesional you support. A 1 for 
+'proposal_accepted' field in 'validation_history' indicates that the original proposal was accepted. 
+A 0 for 'proposal_accepted' indicates that the original proposal was rejected. Please use this information to 
+discern the preferences of the medical proffesional and generate proposals that are likely to be accepted by the 
+validator. 
 
-The "description of error" field is empty if the "error" field is 0, but contains a human readable description 
-of the error if the "error" field is 1. 
+Return a python dictionary with a key for "original_proposal", "new_proposal", and "justification",
+where the justification field is a two sentence explanation for why you think the medical proffesional would prefer
+the new proposal vs the old proposal made by the proposal agent. The new proposal must come from {{careplan}}.
 
-comment: Only return the requested python dictionary and do not return other text.
-
-The HL7 FHIR json document is here: {{HL7_FHIR}}
+Only return the python dictionary with the three property names and please use double quotes for all property names
+in the python dictionary. 
 {{~/user}}
                                            
 {{~! Generate the evaluation}}
@@ -164,11 +183,12 @@ field should contain a 1 if the proposal was accepted and a 0 if the proposal wa
 should should contain the new proposal if the "accepted_proposal" field is 0 and the provided proposal if the 
 "accepted field" is 0. The "justification" field should contain the clinical justification for the new 
 proposal if the "accepted_proposal" is 0. The justification field should not mention that you are selecting proposals 
-from a pre-defined list or that you are restricted to certain proposals. remember to return a valid python dictionary. 
+from a pre-defined list or that you are restricted to certain proposals. remember to return a valid python dictionary.
+Use double quotes for properties/keys and values. 
 {{~/user}}
                                            
 {{~! Generate the validation}}
 {{#assistant~}}
-{{gen 'validation'}}
+{{gen 'validation' max_tokens=6000}}
 {{~/assistant}}''')
 
