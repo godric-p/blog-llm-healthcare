@@ -3,6 +3,7 @@ import json
 from utils import *
 import guidance
 
+# re
 pth = os.path.join(os.path.dirname(__file__), '..', 'data/convos.json')
 with open(pth, 'r') as json_file:
     base_conversations = json.load(json_file)
@@ -10,9 +11,18 @@ with open(pth, 'r') as json_file:
 # initialize sql database
 initialize_sqlite()
 
+# define range
+n = 10 # number of iterations
+if len(base_conversations) > 0:
+    left = len(base_conversations)
+else:
+    left = 0
+    base_conversations = {}
+
+right = left + 10
+
 # Loop 100 times
-convos = {}
-for iteration in range(0,50):
+for iteration in range(left,right):
     try:
         print(colored('Starting iteration: ' + str(iteration), 'green'))
 
@@ -21,15 +31,13 @@ for iteration in range(0,50):
         guidance.llms.OpenAI.cache.clear()
 
         # simulate conversation between patient and provider
-        if iteration < len(base_conversations):
-            base_conversation = base_conversations[str(iteration)]
-        else:
-            base_conversation = simulate_conversation() 
-            if base_conversation and not base_conversation[-1]:
-                base_conversation.pop()
+        base_conversation = simulate_conversation() 
+        
+        if base_conversation and not base_conversation[-1]:
+            base_conversation.pop()
 
         # Concatenate the results
-        convos[str(iteration)] = {
+        base_conversations[str(iteration)] = {
             'base_conversation': base_conversation
         }
 
@@ -40,4 +48,4 @@ for iteration in range(0,50):
 
 # save iterations
 val_pth = os.path.join(os.path.dirname(__file__), '..', 'data/convos.json')
-save_dict_to_json(convos, val_pth)
+save_dict_to_json(base_conversations, val_pth)
