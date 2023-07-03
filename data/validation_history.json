@@ -1,0 +1,135 @@
+{
+    "0": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "1": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order imaging tests"
+        }
+    },
+    "2": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "3": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "5": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "6": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "7": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "8": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "9": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "10": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "11": {
+        "val_history": {
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "12": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "13": {
+        "val_history": {
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "14": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "15": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "16": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "17": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "18": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "19": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    }
+}

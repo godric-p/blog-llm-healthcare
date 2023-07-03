@@ -6,23 +6,27 @@ import os
 from termcolor import colored
 from agents import patient_agent, healthcare_agent, sql_agent, gpt
 
-def generate_care_plan_options(filter_preferred=False):
+def generate_care_plan_options(preferred=False):
     care_plan_options = {
         "option": [
-            "Arrange for cognitive behavioral therapy",
-            "Prescribe medication",
-            "Refer to a specialist",
-            "Order lab tests",
+            "Prescribe appropriate medication",
+            "Refer to a relevant specialist",
+            "Order specific lab tests",
             "Provide self-care instructions",
             "Recommend lifestyle modifications",
-            "Arrange for physical therapy sessions",
             "Suggest dietary changes",
-            "Offer mental health counseling",
-            "Provide resources for patient education"
+            "Arrange for mental health counseling",
+            "Order imaging tests",
+            "Prescribe specific therapy (such as respiratory or occupational)",
+            "Recommend stress management techniques",
+            "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "Recommend over-the-counter medications",
+            "Provide disease-specific counseling",
+            "Involve social services",
+            "Advise hospital admission",
         ],
         "preferred": [
             True,
-            True,
             False,
             True,
             False,
@@ -30,17 +34,24 @@ def generate_care_plan_options(filter_preferred=False):
             False,
             True,
             True,
-            False
+            True,
+            False,
+            True,
+            True,
+            True,
+            False,
+            True
         ]
     }
 
     df = pd.DataFrame(care_plan_options)
 
     # Filter the DataFrame based on the preferred field
-    if filter_preferred:
+    if preferred:
         df = df[df['preferred']]
 
     return df['option'].tolist()
+
 
 # intialize database
 def initialize_sqlite():
@@ -179,7 +190,7 @@ def load_iteration_data():
         with open(val_pth, 'r') as json_file:
             validation_history = json.load(json_file)
 
-        left = len(validation_history)
+        left = len(validation_history) + 1
 
         with open(iter_pth, 'r') as json_file:
             iteration_results = json.load(json_file)

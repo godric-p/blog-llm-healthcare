@@ -8,7 +8,7 @@ initialize_sqlite()
 
 # all careplan options
 careplan = generate_care_plan_options()
-careplan_preferred = generate_care_plan_options(filter_preferred=True)
+careplan_preferred = generate_care_plan_options(preferred=True)
 
 # load conversation file
 base_conversations = load_conversations()
@@ -76,7 +76,7 @@ for iteration in range(left,left+n):
             'proposals': proposals,
             'fhir_eval': fhir_eval,
             'proposal_eval': proposal_eval,
-            'validation_history': combine_proposals(proposals, proposal_val)
+            'validation': combine_proposals(proposals, proposal_val)
         }
 
         del proposal_agent

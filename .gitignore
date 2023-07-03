@@ -15,6 +15,4 @@ log.txt
 __pycache__/
 scratch.ipynb
 data/database.db 
-data/iteration_results.json
-data/validation_history.json
 .DS_Store
