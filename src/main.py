@@ -1,4 +1,3 @@
-
 from termcolor import colored
 import json 
 from utils import *
@@ -11,15 +10,15 @@ initialize_sqlite()
 careplan = generate_care_plan_options()
 careplan_preferred = generate_care_plan_options(filter_preferred=True)
 
-# temp solution to not have to run conversations
-pth = os.path.join(os.path.dirname(__file__), '..', 'data/convos.json')
-with open(pth, 'r') as json_file:
-    base_conversations = json.load(json_file)
+# load conversation file
+base_conversations = load_conversations()
 
-# Loop 100 times
-iteration_results = {}
-validation_history = {}
-for iteration in range(0,3):
+# load iteration data
+val_pth, iter_pth, validation_history, iteration_results, left = load_iteration_data()
+
+# Loop n times
+n = 10
+for iteration in range(left,left+n):
     try:
         print(colored('Starting iteration: ' + str(iteration), 'green'))
 
@@ -27,10 +26,9 @@ for iteration in range(0,3):
         from agents import *
         guidance.llms.OpenAI.cache.clear()
 
-        print(colored('Generating base conversation and quering database', 'yellow'))
+        print(colored('Loading base conversation', 'yellow'))
 
-        # simulate conversation between patient and provider
-        # base_conversation = simulate_conversation() 
+        # load simulated conversation between patient and provider
         base_conversation = base_conversations[str(iteration)] 
 
         print(colored('Generating summaries and proposals', 'yellow'))
@@ -50,7 +48,7 @@ for iteration in range(0,3):
         # evaluator agent revewing proposal
         proposal = {'summary': proposals['summary'], 'proposal': proposals['proposal']}
 
-        if iteration > 0:
+        if iteration > left:
             evaluator_agent = evaluator_agent(proposal=proposal, careplan = careplan, val_history=validation_history, llm=gpt(4))
             proposal_eval = json.loads(evaluator_agent['evaluation'])
         else:
@@ -60,20 +58,25 @@ for iteration in range(0,3):
 
         # validator agent
         validator_agent = validator_agent(options=careplan_preferred, proposal=proposals, llm=gpt(4))
-        proposal_validation = combine_proposals(proposals, json.loads(validator_agent['validation']))
+        proposal_val = json.loads(validator_agent['validation'])
+
+        # condensed val history to feeback into evaluator
+        keys = ['proposal_accepted', 'new_proposal']
+        proposal_validation = {'old_proposal': proposals['proposal']}
+        proposal_validation.update({key: proposal_val[key] for key in keys})
 
         # keep track of the validation history
-        validation_history[iteration] = {
-            'history': proposal_validation
+        validation_history[str(iteration)] = {
+            'val_history': proposal_validation
         }
 
         # Concatenate the results
-        iteration_results[iteration] = {
+        iteration_results[str(iteration)] = {
             'base_conversation': base_conversation,
             'proposals': proposals,
             'fhir_eval': fhir_eval,
             'proposal_eval': proposal_eval,
-            'validation_history': proposal_validation
+            'validation_history': combine_proposals(proposals, proposal_val)
         }
 
         del proposal_agent
@@ -86,7 +89,5 @@ for iteration in range(0,3):
         continue  # Continue to the next iteration
 
 # save iterations
-val_pth = os.path.join(os.path.dirname(__file__), '..', 'data/validation_history.json')
-iter_pth = os.path.join(os.path.dirname(__file__), '..', 'data/iteration_results.json')
 save_dict_to_json(validation_history, val_pth)
 save_dict_to_json(iteration_results, iter_pth)

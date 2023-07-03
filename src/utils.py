@@ -149,6 +149,43 @@ def simulate_conversation():
 
     return result
 
+def load_conversations():
+    # Define the file path to the conversations JSON
+    conv_pth = os.path.join(os.path.dirname(__file__), '..', 'data/convos.json')
+
+    # Check if the convo file exists
+    if not os.path.exists(conv_pth):
+        raise FileNotFoundError(f"No conversation file found at {conv_pth}")
+    else:
+        # Load the existing JSON data from the file
+        with open(conv_pth, 'r') as json_file:
+            base_conversations = json.load(json_file)
+    
+    return base_conversations
+
+def load_iteration_data():
+
+    # Define the file paths
+    val_pth = os.path.join(os.path.dirname(__file__), '..', 'data/validation_history.json')
+    iter_pth = os.path.join(os.path.dirname(__file__), '..', 'data/iteration_results.json')
+
+    # Load validation history
+    if not os.path.exists(val_pth):
+        validation_history = {}
+        iteration_results = {}
+        left = 0
+        print(colored('Iteration results not found, initializing empty dictionaries.', 'red'))
+    else:
+        with open(val_pth, 'r') as json_file:
+            validation_history = json.load(json_file)
+
+        left = len(validation_history)
+
+        with open(iter_pth, 'r') as json_file:
+            iteration_results = json.load(json_file)
+
+    return val_pth, iter_pth, validation_history, iteration_results, left
+
 
 def combine_proposals(dict1, dict2):
     new_dict = {
