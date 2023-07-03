@@ -17,7 +17,7 @@ base_conversations = load_conversations()
 val_pth, iter_pth, validation_history, iteration_results, left = load_iteration_data()
 
 # Loop n times
-n = 10
+n = 20
 for iteration in range(left,left+n):
     try:
         print(colored('Starting iteration: ' + str(iteration), 'green'))

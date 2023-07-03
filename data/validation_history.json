@@ -131,5 +131,138 @@
             "proposal_accepted": 1,
             "new_proposal": "Order specific lab tests"
         }
+    },
+    "20": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "21": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "22": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "23": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "24": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "25": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "26": {
+        "val_history": {
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "27": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "28": {
+        "val_history": {
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "29": {
+        "val_history": {
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "30": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "31": {
+        "val_history": {
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "33": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order imaging tests"
+        }
+    },
+    "34": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "35": {
+        "val_history": {
+            "old_proposal": "Recommend lifestyle modifications",
+            "proposal_accepted": 0,
+            "new_proposal": "Provide disease-specific counseling"
+        }
+    },
+    "36": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "37": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "38": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "39": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
     }
 }
