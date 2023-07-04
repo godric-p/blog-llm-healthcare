@@ -17,8 +17,10 @@ base_conversations = load_conversations()
 val_pth, iter_pth, validation_history, iteration_results, left = load_iteration_data()
 
 # Loop n times
-n = 1
-for iteration in range(left,left+n):
+n = 50
+indices = [10, 20, 39, 49]
+#for iteration in range(left,left+n):
+for iteration in indices:
     try:
         print(colored('Starting iteration: ' + str(iteration), 'green'))
 
@@ -48,7 +50,7 @@ for iteration in range(left,left+n):
         # evaluator agent revewing proposal
         proposal = {'summary': proposals['summary'], 'proposal': proposals['proposal']}
 
-        if iteration > left:
+        if iteration > 0:
             evaluator_agent = evaluator_agent(proposal=proposal, careplan = careplan, val_history=validation_history, llm=gpt(4))
             proposal_eval = json.loads(evaluator_agent['evaluation'])
         else:

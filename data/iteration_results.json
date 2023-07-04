@@ -747,15 +747,13 @@
             ]
         },
         "proposals": {
-            "summary": "The patient, a 65-year-old female with a history of depressive disorder, has been experiencing severe, unmanageable nausea for the past 4 weeks, affecting her daily activities and eating habits. No specific triggers have been identified, and the healthcare provider plans to schedule an appointment for further evaluation.",
+            "summary": "A 65-year-old female patient with a history of depressive disorder reported experiencing severe, unmanageable nausea for the past 4 weeks, affecting her daily activities and eating habits. The patient has not identified any specific triggers for the nausea, which is present throughout the day.",
             "SOAP": {
                 "Subjective": "Patient reports severe nausea lasting for 4 weeks, affecting daily activities and eating habits. No specific triggers identified.",
                 "Objective": "Patient is a 65-year-old female with a history of depressive disorder.",
-                "Assessment": "Severe, unmanageable nausea of unknown origin, further evaluation needed.",
-                "Plan": "Schedule an appointment with a healthcare provider for further evaluation.",
-                "Billing codes": [
-                    "R11.2"
-                ]
+                "Assessment": "Severe, chronic nausea with unknown triggers, impacting daily life and nutritional intake.",
+                "Plan": "Schedule an appointment with a healthcare provider for further evaluation of symptoms. Possible need for diagnostic tests to identify the cause of the nausea.",
+                "Billing_Code": "R11.2"
             },
             "HL7FHIR": {
                 "resourceType": "Encounter",
@@ -777,11 +775,11 @@
                 ],
                 "period": {
                     "start": "2022-01-01T00:00:00Z",
-                    "end": "2022-01-01T00:00:00Z"
+                    "end": "2022-01-01T00:30:00Z"
                 },
                 "reason": [
                     {
-                        "text": "Severe, unmanageable nausea for 4 weeks"
+                        "text": "Severe, chronic nausea"
                     }
                 ],
                 "diagnosis": [
@@ -803,18 +801,20 @@
                 ]
             },
             "proposal": "Order specific lab tests",
-            "justification": "Given the patient's severe, unmanageable nausea of unknown origin, ordering specific lab tests would be the most appropriate next step to identify potential underlying causes."
+            "justification": "Given the patient's severe, chronic nausea with no identifiable triggers, specific lab tests are necessary to identify the underlying cause and guide appropriate treatment."
         },
-        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of required fields such as 'resourceType', 'status', 'class', 'subject', and optional fields like 'participant', 'period', 'reason', and 'diagnosis' are also correctly implemented.",
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of objects and arrays, and the correct use of system URLs and codes.",
         "proposal_eval": {
-            "evaluation": "not enough data to conduct evaluation"
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently accepted the proposal to order specific lab tests in the past."
         },
         "validation": {
-            "summary": "The patient, a 65-year-old female with a history of depressive disorder, has been experiencing severe, unmanageable nausea for the past 4 weeks, affecting her daily activities and eating habits. No specific triggers have been identified, and the healthcare provider plans to schedule an appointment for further evaluation.",
+            "summary": "A 65-year-old female patient with a history of depressive disorder reported experiencing severe, unmanageable nausea for the past 4 weeks, affecting her daily activities and eating habits. The patient has not identified any specific triggers for the nausea, which is present throughout the day.",
             "old_proposal": "Order specific lab tests",
             "proposal_accepted": 1,
             "validator_proposal": "Order specific lab tests",
-            "justification": "Given the patient's severe, unmanageable nausea of unknown origin, ordering specific lab tests would be the most appropriate next step to identify potential underlying causes."
+            "justification": "Given the patient's severe, chronic nausea with no identifiable triggers, specific lab tests are necessary to identify the underlying cause and guide appropriate treatment."
         }
     },
     "11": {
@@ -1625,10 +1625,10 @@
         "proposals": {
             "summary": "An 80-year-old female patient with a history of Rheumatoid arthritis, identified as pid_8, reported experiencing a fever of around 100.5 degrees Fahrenheit, fatigue, and a mild headache for the past day. The healthcare provider acknowledged her symptoms and advised her to continue monitoring them while arranging an appointment for further evaluation.",
             "SOAP": {
-                "Subjective": "80-year-old female patient with a history of Rheumatoid arthritis reported a fever of around 100.5 degrees Fahrenheit, fatigue, and a mild headache for the past day.",
+                "Subjective": "Patient pid_8, an 80-year-old female with a history of Rheumatoid arthritis, reports having a fever of around 100.5 degrees Fahrenheit for the past day. She also experiences fatigue and a mild headache.",
                 "Objective": "Patient's self-reported symptoms include fever, fatigue, and mild headache.",
-                "Assessment": "Patient's symptoms may indicate an infection or a flare-up of her Rheumatoid arthritis.",
-                "Plan": "Arrange an appointment for further evaluation of symptoms. Continue to monitor symptoms in the meantime.",
+                "Assessment": "The patient's symptoms may indicate an infection or a flare-up of her Rheumatoid arthritis. Further evaluation is needed.",
+                "Plan": "Arrange an appointment for the patient with a healthcare provider for further evaluation. The patient is advised to continue monitoring her symptoms.",
                 "Billing codes": [
                     "R50.9 (Fever, unspecified)",
                     "G93.3 (Postviral fatigue syndrome)",
@@ -1649,7 +1649,7 @@
                 "participant": [
                     {
                         "individual": {
-                            "reference": "Practitioner/provider"
+                            "reference": "Practitioner/provider_id"
                         }
                     }
                 ],
@@ -1664,20 +1664,12 @@
                                 "system": "http://snomed.info/sct",
                                 "code": "R50.9",
                                 "display": "Fever, unspecified"
-                            }
-                        ]
-                    },
-                    {
-                        "coding": [
+                            },
                             {
                                 "system": "http://snomed.info/sct",
                                 "code": "G93.3",
                                 "display": "Postviral fatigue syndrome"
-                            }
-                        ]
-                    },
-                    {
-                        "coding": [
+                            },
                             {
                                 "system": "http://snomed.info/sct",
                                 "code": "R51",
@@ -1688,18 +1680,20 @@
                 ]
             },
             "proposal": "Order specific lab tests",
-            "justification": "Given the patient's age, history of Rheumatoid arthritis, and current symptoms of fever, fatigue, and headache, specific lab tests are necessary to rule out an infection or a flare-up of her condition."
+            "justification": "Given the patient's age, history of Rheumatoid arthritis, and current symptoms of fever, fatigue, and headache, specific lab tests are necessary to rule out infection or a flare-up of her condition."
         },
-        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of system, code, and display fields, and the correct nesting of elements.",
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard, with appropriate use of resource types, coding systems, and data types, and all required fields for an Encounter resource, such as 'resourceType', 'status', 'class', 'subject', 'participant', and 'period', are present.",
         "proposal_eval": {
-            "evaluation": "not enough data to conduct evaluation"
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently accepted the proposal to order specific lab tests in the past, indicating a preference for this approach."
         },
         "validation": {
             "summary": "An 80-year-old female patient with a history of Rheumatoid arthritis, identified as pid_8, reported experiencing a fever of around 100.5 degrees Fahrenheit, fatigue, and a mild headache for the past day. The healthcare provider acknowledged her symptoms and advised her to continue monitoring them while arranging an appointment for further evaluation.",
             "old_proposal": "Order specific lab tests",
             "proposal_accepted": 1,
             "validator_proposal": "Order specific lab tests",
-            "justification": "Given the patient's age, history of Rheumatoid arthritis, and current symptoms of fever, fatigue, and headache, specific lab tests are necessary to rule out an infection or a flare-up of her condition."
+            "justification": "Given the patient's age, history of Rheumatoid arthritis, and current symptoms of fever, fatigue, and headache, specific lab tests are necessary to rule out infection or a flare-up of her condition."
         }
     },
     "21": {
@@ -3096,24 +3090,20 @@
             ]
         },
         "proposals": {
-            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed. The healthcare assistant documented the symptoms and scheduled an appointment with a healthcare provider for further assistance.",
+            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported experiencing anxiety for the past hour, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed. The healthcare assistant documented the symptoms and scheduled an appointment with a healthcare provider for further assistance.",
             "SOAP": {
-                "Subjective": "Patient reports experiencing anxiety for the past hour, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed.",
-                "Objective": "Patient is a 35-year-old female with a history of Hyperthyroidism.",
-                "Assessment": "Patient's symptoms may be related to anxiety, possibly exacerbated by her Hyperthyroidism.",
-                "Plan": "Schedule an appointment with a healthcare provider for further evaluation and treatment. Document all reported symptoms for reference during the appointment.",
-                "Billing codes": [
-                    "F41.9 - Anxiety disorder, unspecified",
-                    "E05.90 - Hyperthyroidism, unspecified"
-                ]
+                "Subjective": "35-year-old female patient with a history of Hyperthyroidism reports experiencing anxiety for the past hour. Symptoms include a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed.",
+                "Objective": "Patient verbalizes anxiety and distress. No physical examination or diagnostic tests performed during this interaction.",
+                "Assessment": "Patient's symptoms are consistent with an anxiety episode, possibly related to her Hyperthyroidism.",
+                "Plan": "Schedule an appointment with a healthcare provider for further evaluation and management. ICD-10 code for Hyperthyroidism (E05) and Anxiety (F41.9) should be used for billing purposes."
             },
             "HL7FHIR": {
                 "resourceType": "Encounter",
                 "status": "finished",
                 "class": {
                     "system": "http://hl7.org/fhir/v3/ActCode",
-                    "code": "AMB",
-                    "display": "ambulatory"
+                    "code": "IMP",
+                    "display": "inpatient encounter"
                 },
                 "subject": {
                     "reference": "Patient/pid_9"
@@ -3121,39 +3111,54 @@
                 "participant": [
                     {
                         "individual": {
-                            "reference": "Practitioner/provider_id"
+                            "reference": "Practitioner/provider"
                         }
                     }
                 ],
+                "period": {
+                    "start": "unknown",
+                    "end": "unknown"
+                },
                 "reason": [
                     {
-                        "text": "Patient reports experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed."
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/sid/icd-10",
+                                "code": "F41.9",
+                                "display": "Anxiety"
+                            }
+                        ]
                     }
                 ],
                 "diagnosis": [
                     {
                         "condition": {
-                            "reference": "Condition/F41.9",
-                            "display": "Anxiety disorder, unspecified"
-                        }
-                    },
-                    {
-                        "condition": {
-                            "reference": "Condition/E05.90",
-                            "display": "Hyperthyroidism, unspecified"
-                        }
+                            "reference": "Condition/hyperthyroidism"
+                        },
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/diagnosis-role",
+                                    "code": "AD",
+                                    "display": "admission diagnosis"
+                                }
+                            ]
+                        },
+                        "rank": 1
                     }
                 ]
             },
             "proposal": "Arrange for mental health counseling",
             "justification": "Given the patient's reported symptoms of anxiety, arranging for mental health counseling would be beneficial in providing the patient with strategies to manage her symptoms."
         },
-        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure of the document follows the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'reason', and 'diagnosis'.",
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of system, code, and display fields, and the correct nesting of elements such as 'class', 'subject', 'participant', 'period', 'reason', and 'diagnosis'.",
         "proposal_eval": {
-            "evaluation": "not enough data to conduct evaluation"
+            "original_proposal": "Arrange for mental health counseling",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has frequently accepted the proposal to order specific lab tests, especially for patients with hyperthyroidism experiencing physical symptoms."
         },
         "validation": {
-            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed. The healthcare assistant documented the symptoms and scheduled an appointment with a healthcare provider for further assistance.",
+            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported experiencing anxiety for the past hour, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed. The healthcare assistant documented the symptoms and scheduled an appointment with a healthcare provider for further assistance.",
             "old_proposal": "Arrange for mental health counseling",
             "proposal_accepted": 1,
             "validator_proposal": "Arrange for mental health counseling",
@@ -3890,23 +3895,18 @@
             ]
         },
         "proposals": {
-            "summary": "80-year-old female patient with a history of Rheumatoid arthritis reported experiencing moderate shortness of breath for the past hour, which has been occurring more frequently and severely than before. The patient also reported feeling fatigued and lightheaded, with physical exertion exacerbating the shortness of breath.",
+            "summary": "The patient, an 80-year-old female with a history of Rheumatoid arthritis, reported experiencing moderate shortness of breath for the past hour, which has been occurring more frequently and severely than before. Physical exertion worsens the condition, and she also feels fatigued and lightheaded.",
             "SOAP": {
-                "Subjective": "Patient reports moderate shortness of breath for the past hour, which has been more frequent and severe than previous episodes. Patient also reports feeling fatigued and lightheaded, with physical exertion exacerbating the symptoms.",
-                "Objective": "Patient is an 80-year-old female with a history of Rheumatoid arthritis.",
-                "Assessment": "The patient's symptoms may indicate a possible cardiac or respiratory issue. Further evaluation is needed.",
-                "Plan": "Arrange an appointment for the patient to see a provider for further evaluation. The patient is advised to rest and avoid physical exertion until the appointment.",
-                "Billing codes": [
-                    "R06.02 - Shortness of breath",
-                    "M06.9 - Rheumatoid arthritis, unspecified",
-                    "R53.83 - Other fatigue"
-                ]
+                "Subjective": "80-year-old female patient with a history of Rheumatoid arthritis reports experiencing moderate shortness of breath for the past hour, which has been more frequent and severe than previous episodes. She also feels fatigued and lightheaded, and physical exertion exacerbates her symptoms.",
+                "Objective": "Patient verbalizes shortness of breath and fatigue. No physical examination or diagnostic tests performed during the call.",
+                "Assessment": "The patient's symptoms suggest possible exacerbation of an underlying respiratory condition, possibly related to her Rheumatoid arthritis.",
+                "Plan": "The patient needs to be evaluated by a healthcare provider. An appointment will be arranged for her. ICD-10 code for billing: R06.02 (Shortness of breath), M06.9 (Rheumatoid arthritis, unspecified)"
             },
             "HL7FHIR": {
                 "resourceType": "Encounter",
                 "status": "finished",
                 "class": {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "system": "http://hl7.org/fhir/v3/ActCode",
                     "code": "AMB",
                     "display": "ambulatory"
                 },
@@ -3924,31 +3924,43 @@
                     "start": "2022-01-01T00:00:00Z",
                     "end": "2022-01-01T00:30:00Z"
                 },
-                "reasonCode": [
+                "reason": [
                     {
-                        "coding": [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "267036007",
-                                "display": "Shortness of breath"
-                            }
-                        ]
+                        "text": "Shortness of breath, fatigue, lightheadedness"
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "condition": {
+                            "reference": "Condition/shortness-of-breath"
+                        },
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/diagnosis-role",
+                                    "code": "AD",
+                                    "display": "admission diagnosis"
+                                }
+                            ]
+                        }
                     }
                 ]
             },
             "proposal": "Order specific lab tests",
-            "justification": "Given the patient's age, history of Rheumatoid arthritis, and recent increase in severity and frequency of shortness of breath, it is necessary to order specific lab tests to rule out any underlying cardiac or respiratory conditions."
+            "justification": "Given the patient's symptoms and history of Rheumatoid arthritis, specific lab tests are necessary to evaluate the cause of her increased shortness of breath and associated symptoms."
         },
-        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'period', and 'reasonCode'.",
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of required fields such as 'resourceType', 'status', 'class', 'subject', and 'participant', and optional fields like 'period', 'reason', and 'diagnosis' are also correctly implemented.",
         "proposal_eval": {
-            "evaluation": "not enough data to conduct evaluation"
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
+            "justification": "Given the patient's symptoms of shortness of breath and fatigue, the medical professional may prefer a more specific diagnostic approach to identify the underlying cause."
         },
         "validation": {
-            "summary": "80-year-old female patient with a history of Rheumatoid arthritis reported experiencing moderate shortness of breath for the past hour, which has been occurring more frequently and severely than before. The patient also reported feeling fatigued and lightheaded, with physical exertion exacerbating the shortness of breath.",
+            "summary": "The patient, an 80-year-old female with a history of Rheumatoid arthritis, reported experiencing moderate shortness of breath for the past hour, which has been occurring more frequently and severely than before. Physical exertion worsens the condition, and she also feels fatigued and lightheaded.",
             "old_proposal": "Order specific lab tests",
             "proposal_accepted": 1,
             "validator_proposal": "Order specific lab tests",
-            "justification": "Given the patient's age, history of Rheumatoid arthritis, and recent increase in severity and frequency of shortness of breath, it is necessary to order specific lab tests to rule out any underlying cardiac or respiratory conditions."
+            "justification": "Given the patient's symptoms and history of Rheumatoid arthritis, specific lab tests are necessary to evaluate the cause of her increased shortness of breath and associated symptoms."
         }
     }
 }
