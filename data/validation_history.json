@@ -264,5 +264,75 @@
             "proposal_accepted": 1,
             "new_proposal": "Arrange for mental health counseling"
         }
+    },
+    "40": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "41": {
+        "val_history": {
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "42": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Arrange for mental health counseling"
+        }
+    },
+    "43": {
+        "val_history": {
+            "old_proposal": "Arrange for an in-person evaluation as soon as possible.",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "44": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "45": {
+        "val_history": {
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "46": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "47": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "48": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
+    },
+    "49": {
+        "val_history": {
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "new_proposal": "Order specific lab tests"
+        }
     }
 }

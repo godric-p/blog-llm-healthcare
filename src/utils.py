@@ -190,7 +190,7 @@ def load_iteration_data():
         with open(val_pth, 'r') as json_file:
             validation_history = json.load(json_file)
 
-        left = len(validation_history) + 1
+        left = len(validation_history) + 2
 
         with open(iter_pth, 'r') as json_file:
             iteration_results = json.load(json_file)

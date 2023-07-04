@@ -3101,7 +3101,332 @@
                 "Subjective": "Patient reports experiencing anxiety for the past hour, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed.",
                 "Objective": "Patient is a 35-year-old female with a history of Hyperthyroidism.",
                 "Assessment": "Patient's symptoms may be related to anxiety, possibly exacerbated by her Hyperthyroidism.",
-                "Plan": "Schedule an appointment with a healthcare provider for further evaluation and treatment. Document all reported symptoms for reference during the appointment."
+                "Plan": "Schedule an appointment with a healthcare provider for further evaluation and treatment. Document all reported symptoms for reference during the appointment.",
+                "Billing codes": [
+                    "F41.9 - Anxiety disorder, unspecified",
+                    "E05.90 - Hyperthyroidism, unspecified"
+                ]
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_9"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_id"
+                        }
+                    }
+                ],
+                "reason": [
+                    {
+                        "text": "Patient reports experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed."
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "condition": {
+                            "reference": "Condition/F41.9",
+                            "display": "Anxiety disorder, unspecified"
+                        }
+                    },
+                    {
+                        "condition": {
+                            "reference": "Condition/E05.90",
+                            "display": "Hyperthyroidism, unspecified"
+                        }
+                    }
+                ]
+            },
+            "proposal": "Arrange for mental health counseling",
+            "justification": "Given the patient's reported symptoms of anxiety, arranging for mental health counseling would be beneficial in providing the patient with strategies to manage her symptoms."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure of the document follows the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'reason', and 'diagnosis'.",
+        "proposal_eval": {
+            "evaluation": "not enough data to conduct evaluation"
+        },
+        "validation": {
+            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed. The healthcare assistant documented the symptoms and scheduled an appointment with a healthcare provider for further assistance.",
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "validator_proposal": "Arrange for mental health counseling",
+            "justification": "Given the patient's reported symptoms of anxiety, arranging for mental health counseling would be beneficial in providing the patient with strategies to manage her symptoms."
+        }
+    },
+    "40": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing digestive issues for the past 4 weeks and they have been quite severe.",
+                    "response": "Provider: Hello, I understand that you're experiencing some digestive issues for the past 4 weeks and they have been quite severe. I see from your records that you are a 55-year-old male with a history of hypertension. I'm here to listen and gather information about your symptoms. Can you tell me more about these digestive issues?"
+                },
+                {
+                    "input": "Patient: Sure, I've been having frequent stomach pain, bloating, and discomfort after eating. I also experience nausea and occasional vomiting. Additionally, I've noticed changes in my bowel movements, with alternating constipation and diarrhea. These symptoms have been affecting my daily life and causing a lot of discomfort.",
+                    "response": "Provider: I'm sorry to hear that you're experiencing these symptoms and that they're affecting your daily life. It sounds like you're dealing with stomach pain, bloating, discomfort after eating, nausea, occasional vomiting, and changes in your bowel movements. These symptoms can indeed be very distressing. I'm here to listen and gather all the necessary information. Can you tell me if there's anything that seems to trigger these symptoms or make them worse?"
+                },
+                {
+                    "input": "Patient: Thank you for your understanding. I haven't noticed any specific triggers for these symptoms. They seem to occur regardless of what I eat or drink. However, I have noticed that stress and anxiety tend to make the symptoms worse.",
+                    "response": "Provider: I appreciate you sharing these details. It's important to note that you haven't identified any specific dietary triggers, but stress and anxiety seem to exacerbate your symptoms. This information is very helpful. I understand this is a difficult time for you, and I want to assure you that we're here to support you. I will arrange for you to have an appointment with a healthcare provider who can further evaluate your symptoms and condition."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "The patient, a 55-year-old male with a history of hypertension, has been experiencing severe digestive issues for the past 4 weeks, including stomach pain, bloating, discomfort after eating, nausea, occasional vomiting, and changes in bowel movements. The patient has not identified any specific dietary triggers, but stress and anxiety seem to exacerbate the symptoms.",
+            "SOAP": {
+                "Subjective": "55-year-old male patient with a history of hypertension reports severe digestive issues for the past 4 weeks, including stomach pain, bloating, discomfort after eating, nausea, occasional vomiting, and changes in bowel movements. The patient has not identified any specific dietary triggers, but stress and anxiety seem to exacerbate the symptoms.",
+                "Objective": "Patient appears distressed due to the severity and frequency of symptoms. No physical examination or diagnostic tests have been conducted yet.",
+                "Assessment": "The patient's symptoms suggest a possible gastrointestinal disorder. Further evaluation is needed to confirm the diagnosis.",
+                "Plan": "Refer the patient to a gastroenterologist for further evaluation and possible diagnostic tests. ICD-10 code for billing: K30 - Functional dyspepsia."
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_2"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_1"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:30:00Z"
+                },
+                "reason": [
+                    {
+                        "text": "Severe digestive issues for the past 4 weeks"
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "condition": {
+                            "text": "Possible gastrointestinal disorder"
+                        }
+                    }
+                ]
+            },
+            "proposal": "Refer to a relevant specialist",
+            "justification": "Given the severity and duration of the patient's symptoms, a referral to a gastroenterologist is necessary for further evaluation and possible diagnostic tests."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure of the document aligns with the FHIR standard for an Encounter resource, with appropriate use of required fields such as 'resourceType', 'status', 'class', 'subject', and 'participant', and optional fields like 'period', 'reason', and 'diagnosis' are also correctly implemented.",
+        "proposal_eval": {
+            "original_proposal": "Refer to a relevant specialist",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently preferred ordering specific lab tests over referring to a specialist, as seen in the validation history."
+        },
+        "validation": {
+            "summary": "The patient, a 55-year-old male with a history of hypertension, has been experiencing severe digestive issues for the past 4 weeks, including stomach pain, bloating, discomfort after eating, nausea, occasional vomiting, and changes in bowel movements. The patient has not identified any specific dietary triggers, but stress and anxiety seem to exacerbate the symptoms.",
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's severe and persistent digestive symptoms, it is crucial to conduct specific lab tests to identify any underlying gastrointestinal disorders. This will help in providing a more accurate diagnosis and appropriate treatment plan."
+        }
+    },
+    "41": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing anxiety for the past hour and I wanted to discuss it with you.",
+                    "response": "Provider: Hello, I understand you're feeling anxious right now and I'm here to listen. Just to confirm, you're a 55-year-old male with a history of hypertension, correct? Could you please tell me more about what you're experiencing?"
+                },
+                {
+                    "input": "Patient: Yes, that's correct. I am a 55-year-old male with a history of hypertension. Lately, I've been feeling anxious. It's been about an hour since it started. The anxiety is mild, but it's making me feel restless and on edge. I have this constant feeling of worry and unease, and it's been affecting my ability to concentrate and relax.",
+                    "response": "Provider: I see, thank you for sharing that with me. It sounds like you're experiencing some discomfort due to feelings of anxiety, restlessness, and worry, which are affecting your ability to concentrate and relax. I understand this must be difficult for you. Can you tell me if there were any specific events or thoughts that triggered this anxiety?"
+                },
+                {
+                    "input": "Patient: Thank you for understanding. Yes, there were some specific events that triggered my anxiety. I had a presentation at work today, and I was feeling quite nervous about it. Additionally, I've been dealing with some personal stressors lately, which I think have contributed to my anxiety as well.",
+                    "response": "Provider: I appreciate you opening up about your work-related stress and personal issues. It's understandable that these situations could contribute to feelings of anxiety. It's important to discuss these feelings with a healthcare provider who can provide the appropriate support. I will arrange an appointment for you to speak with a provider about what you're experiencing. Please remember, it's okay to seek help and you're not alone in this."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "The patient, a 55-year-old male with a history of hypertension, reported experiencing mild anxiety for the past hour, causing restlessness, worry, and difficulty concentrating and relaxing. The anxiety was triggered by a work presentation and personal stressors.",
+            "SOAP": {
+                "Subjective": "55-year-old male patient with a history of hypertension reports experiencing mild anxiety for the past hour. The patient describes feelings of restlessness, worry, and difficulty concentrating and relaxing. The anxiety was triggered by a work presentation and personal stressors.",
+                "Objective": "Patient is alert and oriented, but appears anxious.",
+                "Assessment": "The patient is experiencing anxiety, likely related to work stress and personal issues.",
+                "Plan": "Arrange an appointment for the patient to speak with a mental health provider. Consider prescribing anxiolytic medication if necessary.",
+                "Billing codes": [
+                    "F41.9 - Anxiety disorder, unspecified",
+                    "I10 - Essential (primary) hypertension"
+                ]
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_2"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_1"
+                        }
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "condition": {
+                            "reference": "Condition/F41.9",
+                            "display": "Anxiety disorder, unspecified"
+                        }
+                    },
+                    {
+                        "condition": {
+                            "reference": "Condition/I10",
+                            "display": "Essential (primary) hypertension"
+                        }
+                    }
+                ]
+            },
+            "proposal": "Arrange for mental health counseling",
+            "justification": "Given the patient's reported anxiety and its impact on his daily life, arranging for mental health counseling would provide the necessary support and coping strategies."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any errors. The document follows the correct structure for an Encounter resource, with appropriate use of system, code, and display fields, and correct referencing for the subject, participant, and diagnosis fields.",
+        "proposal_eval": {
+            "original_proposal": "Arrange for mental health counseling",
+            "new_proposal": "Recommend stress management techniques",
+            "justification": "Given the patient's anxiety is triggered by work and personal stressors, the medical professional may prefer a proposal that directly addresses stress management."
+        },
+        "validation": {
+            "summary": "The patient, a 55-year-old male with a history of hypertension, reported experiencing mild anxiety for the past hour, causing restlessness, worry, and difficulty concentrating and relaxing. The anxiety was triggered by a work presentation and personal stressors.",
+            "old_proposal": "Arrange for mental health counseling",
+            "proposal_accepted": 1,
+            "validator_proposal": "Arrange for mental health counseling",
+            "justification": "Given the patient's reported anxiety and its impact on his daily life, arranging for mental health counseling would provide the necessary support and coping strategies."
+        }
+    },
+    "42": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_3. I'm calling because I've been experiencing a headache for the past week and it's been of moderate severity.",
+                    "response": "Provider: Hello, I understand you're experiencing a headache that's been ongoing for a week. I see from your records that you're a 30-year-old male with patient ID pid_3. I'm here to listen and gather information about your symptoms. Can you tell me more about the nature of your headaches?"
+                },
+                {
+                    "input": "Patient: Sure, the headaches I've been having are a constant dull pain in my head. It's not throbbing, but more like a pressure or tightness. It's been bothering me throughout the day and doesn't seem to go away with rest or over-the-counter pain relievers.",
+                    "response": "Provider: I see, you're experiencing a constant dull pain in your head, described as pressure or tightness, that persists throughout the day and doesn't seem to be relieved by rest or over-the-counter pain relievers. I understand how this can be bothersome for you. Can you share if there have been any changes in your lifestyle or routine recently?"
+                },
+                {
+                    "input": "Patient: Yes, there have been a few changes in my lifestyle recently. I've been working longer hours and have been under a lot of stress. I've also noticed that I haven't been getting enough sleep and my diet hasn't been the healthiest.",
+                    "response": "Provider: I understand that you've been working longer hours, experiencing a lot of stress, not getting enough sleep, and your diet hasn't been the best recently. These changes can certainly impact how you feel. I appreciate you sharing this information with me. I think it would be beneficial for you to discuss these symptoms and lifestyle changes with a healthcare provider. I will arrange an appointment for you."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "The patient, a 30-year-old male with patient ID pid_3, has been experiencing a constant dull headache for a week, which is not relieved by rest or over-the-counter pain relievers. The patient has also reported recent lifestyle changes including increased work hours, stress, inadequate sleep, and poor diet.",
+            "SOAP": {
+                "Subjective": "Patient reports a week-long headache of moderate severity, described as a constant dull pain, pressure, or tightness that is not relieved by rest or over-the-counter pain relievers. Patient also reports increased work hours, high stress levels, inadequate sleep, and poor diet.",
+                "Objective": "Patient is a 30-year-old male. No physical examination or lab tests performed during this conversation.",
+                "Assessment": "Patient's symptoms suggest tension-type headache, possibly exacerbated by lifestyle changes and stress.",
+                "Plan": "Refer patient to a healthcare provider for further evaluation and management. Consider lifestyle modifications and stress management techniques. Billing codes: G43.009 (Tension-type headache, unspecified, not intractable)."
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_3"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:00:00Z"
+                },
+                "reason": [
+                    {
+                        "text": "Patient reports a week-long headache of moderate severity, described as a constant dull pain, pressure, or tightness that is not relieved by rest or over-the-counter pain relievers. Patient also reports increased work hours, high stress levels, inadequate sleep, and poor diet."
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "condition": {
+                            "text": "Tension-type headache"
+                        },
+                        "use": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/diagnosis-role",
+                                    "code": "01",
+                                    "display": "primary"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "proposal": "Refer to a relevant specialist",
+            "justification": "Given the patient's persistent headaches and lifestyle changes, a referral to a specialist is necessary for further evaluation and management."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of objects and arrays, and the correct use of system URLs and codes.",
+        "proposal_eval": {
+            "original_proposal": "Refer to a relevant specialist",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently preferred ordering specific lab tests over referring to a specialist, as seen in the validation history."
+        },
+        "validation": {
+            "summary": "The patient, a 30-year-old male with patient ID pid_3, has been experiencing a constant dull headache for a week, which is not relieved by rest or over-the-counter pain relievers. The patient has also reported recent lifestyle changes including increased work hours, stress, inadequate sleep, and poor diet.",
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "validator_proposal": "Arrange for mental health counseling",
+            "justification": "Given the patient's reported high stress levels, inadequate sleep, and lifestyle changes, mental health counseling could be beneficial for stress management and lifestyle modification, which may help alleviate the tension-type headaches."
+        }
+    },
+    "43": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_9. I'm calling because I've been experiencing severe nausea for the past day.",
+                    "response": "Provider: Hello, I understand you're feeling quite unwell with severe nausea. I see from your records that you're a 35-year-old female with a history of Hyperthyroidism. Can you tell me more about your symptoms? Are there any other symptoms accompanying your nausea?"
+                },
+                {
+                    "input": "Patient: Yes, along with the severe nausea, I've been feeling lightheaded and have had occasional bouts of vomiting. I also feel very weak and have a loss of appetite.",
+                    "response": "Provider: I'm sorry to hear that you're not feeling well. It sounds like you're experiencing quite a few symptoms - severe nausea, feeling lightheaded, occasional vomiting, weakness, and loss of appetite. These symptoms can be quite distressing. Can you tell me how long you've been experiencing these symptoms?"
+                },
+                {
+                    "input": "Patient: Thank you for your concern. I've been experiencing these symptoms for the past day.",
+                    "response": "Provider: I see, so these symptoms have been going on for about a day. I understand how uncomfortable you must be feeling right now. It's important to get you seen by a healthcare provider who can evaluate your symptoms in person. I will arrange an appointment for you as soon as possible. Please take care and reach out if your symptoms worsen in the meantime."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported severe nausea, lightheadedness, occasional vomiting, weakness, and loss of appetite for the past day. The healthcare provider expressed concern and advised an in-person evaluation as soon as possible.",
+            "SOAP": {
+                "Subjective": "Patient reports severe nausea, lightheadedness, occasional vomiting, weakness, and loss of appetite for the past day. She has a history of Hyperthyroidism.",
+                "Objective": "No physical examination was conducted during the conversation.",
+                "Assessment": "The patient's symptoms may be related to her Hyperthyroidism, but further in-person evaluation is necessary.",
+                "Plan": "Arrange an appointment for an in-person evaluation as soon as possible. Monitor symptoms and advise patient to reach out if symptoms worsen.",
+                "Billing_Code": "R11.2 (Nausea with vomiting, unspecified), R53.1 (Weakness), R55 (Syncope and collapse), R63.0 (Anorexia), E05.90 (Thyrotoxicosis, unspecified without thyrotoxic crisis or storm)"
             },
             "HL7FHIR": {
                 "resourceType": "Encounter",
@@ -3123,24 +3448,24 @@
                 ],
                 "period": {
                     "start": "2022-01-01T00:00:00Z",
-                    "end": "2022-01-01T01:00:00Z"
+                    "end": "2022-01-01T00:00:00Z"
                 },
                 "reason": [
                     {
-                        "text": "Patient reports experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed."
+                        "text": "Severe nausea, lightheadedness, occasional vomiting, weakness, and loss of appetite"
                     }
                 ],
                 "diagnosis": [
                     {
                         "condition": {
-                            "reference": "Condition/Hyperthyroidism"
+                            "reference": "Condition/hyperthyroidism"
                         },
                         "role": {
                             "coding": [
                                 {
                                     "system": "http://hl7.org/fhir/diagnosis-role",
                                     "code": "AD",
-                                    "display": "admission diagnosis"
+                                    "display": "admission"
                                 }
                             ]
                         },
@@ -3148,21 +3473,482 @@
                     }
                 ]
             },
-            "proposal": "Arrange for mental health counseling",
-            "justification": "Given the patient's reported symptoms of anxiety, including a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed, arranging for mental health counseling would be an appropriate next step to help manage these symptoms."
+            "proposal": "Arrange for an in-person evaluation as soon as possible.",
+            "justification": "Given the severity and range of the patient's symptoms, an in-person evaluation is necessary to accurately diagnose and treat her condition."
         },
-        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of required fields such as 'resourceType', 'status', 'class', 'subject', and optional fields like 'participant', 'period', 'reason', and 'diagnosis' are also correctly implemented.",
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of required fields such as 'resourceType', 'status', and 'subject', and optional fields like 'class', 'participant', 'period', 'reason', and 'diagnosis' are also correctly implemented.",
         "proposal_eval": {
-            "original_proposal": "Arrange for mental health counseling",
+            "original_proposal": "Arrange for an in-person evaluation as soon as possible.",
             "new_proposal": "Order specific lab tests",
-            "justification": "The medical professional has consistently preferred ordering specific lab tests to further investigate the patient's symptoms."
+            "justification": "Based on the validation history, the medical professional frequently accepts the proposal to 'Order specific lab tests'."
         },
         "validation": {
-            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported experiencing anxiety, including symptoms such as a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed. The healthcare assistant documented the symptoms and scheduled an appointment with a healthcare provider for further assistance.",
-            "old_proposal": "Arrange for mental health counseling",
+            "summary": "A 35-year-old female patient with a history of Hyperthyroidism reported severe nausea, lightheadedness, occasional vomiting, weakness, and loss of appetite for the past day. The healthcare provider expressed concern and advised an in-person evaluation as soon as possible.",
+            "old_proposal": "Arrange for an in-person evaluation as soon as possible.",
+            "proposal_accepted": 0,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's history of Hyperthyroidism and the current symptoms, it is crucial to conduct specific lab tests to understand the current state of the thyroid function. This will help in determining the appropriate course of treatment."
+        }
+    },
+    "44": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_2. I'm calling because I've been experiencing severe nausea for the past week.",
+                    "response": "Provider: Hello, I understand you're feeling unwell. I see here that you're a 55-year-old male with a history of hypertension, and you've been experiencing severe nausea for the past week. I'm here to listen and gather information about your symptoms. Can you tell me more about this nausea? For example, is it constant or does it come and go? Are there any specific times of the day when it's worse?"
+                },
+                {
+                    "input": "Patient: The nausea has been constant for the past week. It doesn't seem to come and go. As for the times of the day, it's been consistently worse in the morning and after meals.",
+                    "response": "Provider: I see, so your nausea has been constant for the past week and it's particularly worse in the mornings and after meals. I'm sorry to hear that you're feeling this way. It's important to keep track of these symptoms. Are there any other symptoms accompanying the nausea? For example, have you noticed any changes in your appetite, weight, or general well-being?"
+                },
+                {
+                    "input": "Patient: Yes, along with the nausea, I've noticed a decrease in my appetite. I haven't been able to eat much and as a result, I've lost a bit of weight. Overall, my general well-being has been affected because of these symptoms.",
+                    "response": "Provider: I understand that along with the constant nausea, you've also experienced a decrease in appetite and some weight loss, which has affected your overall well-being. I'm really sorry to hear that you're going through this. It's important that we get you in to see a provider who can help. I will arrange an appointment for you as soon as possible. Please continue to monitor your symptoms and take care of yourself in the meantime."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "The patient, a 55-year-old male with a history of hypertension, reported experiencing severe, constant nausea for the past week, particularly worse in the mornings and after meals. Along with nausea, the patient has noticed a decrease in appetite, weight loss, and a decline in overall well-being.",
+            "SOAP": {
+                "Subjective": "55-year-old male patient with a history of hypertension reports constant severe nausea for the past week, worse in the mornings and after meals. The patient also reports a decrease in appetite, weight loss, and a decline in overall well-being.",
+                "Objective": "Patient has lost weight. Blood pressure and other vitals to be checked during the upcoming appointment.",
+                "Assessment": "The patient's symptoms suggest a possible gastrointestinal issue. Further evaluation is needed to confirm the diagnosis.",
+                "Plan": "Arrange an appointment for the patient to see a provider as soon as possible. The patient is advised to continue monitoring symptoms. Billing codes: R11.0 (Nausea), R63.0 (Anorexia), R63.4 (Abnormal weight loss), I10 (Essential hypertension)."
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_2"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_1"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:00:00Z"
+                },
+                "reason": [
+                    {
+                        "text": "Severe nausea, decreased appetite, weight loss"
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "condition": {
+                            "reference": "Condition/123",
+                            "display": "Nausea, decreased appetite, weight loss"
+                        },
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/diagnosis-role",
+                                    "code": "AD",
+                                    "display": "admission"
+                                }
+                            ]
+                        },
+                        "rank": 1
+                    }
+                ]
+            },
+            "proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms of constant nausea, decreased appetite, and weight loss, ordering specific lab tests would help in diagnosing the underlying cause and determining the appropriate treatment."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of required fields (like 'resourceType', 'status', 'subject') and optional fields (like 'class', 'participant', 'period', 'reason', 'diagnosis'), and the values provided for these fields are consistent with their expected data types and formats.",
+        "proposal_eval": {
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently accepted the proposal to order specific lab tests in the past."
+        },
+        "validation": {
+            "summary": "The patient, a 55-year-old male with a history of hypertension, reported experiencing severe, constant nausea for the past week, particularly worse in the mornings and after meals. Along with nausea, the patient has noticed a decrease in appetite, weight loss, and a decline in overall well-being.",
+            "old_proposal": "Order specific lab tests",
             "proposal_accepted": 1,
-            "validator_proposal": "Arrange for mental health counseling",
-            "justification": "Given the patient's reported symptoms of anxiety, including a racing heart, restlessness, lightheadedness, trouble focusing, and feeling overwhelmed, arranging for mental health counseling would be an appropriate next step to help manage these symptoms."
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms of constant nausea, decreased appetite, and weight loss, ordering specific lab tests would help in diagnosing the underlying cause and determining the appropriate treatment."
+        }
+    },
+    "45": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_10. I'm calling because I've been experiencing a fever for the past 4 weeks and it has been quite severe.",
+                    "response": "Provider: Hello, I understand that you've been experiencing a fever for the past 4 weeks and it's been quite severe. I see from your records that you are a 60-year-old female. I'm here to listen and gather information about your symptoms. Can you tell me more about your fever? For example, have you noticed any patterns or other symptoms accompanying it?"
+                },
+                {
+                    "input": "Patient: Yes, I have noticed that my fever tends to spike in the evenings and then gradually goes down in the mornings. Along with the fever, I have been experiencing chills, body aches, and fatigue.",
+                    "response": "Provider: I see, you've noticed that your fever spikes in the evenings and decreases in the mornings. Additionally, you've been experiencing chills, body aches, and fatigue. These details are very helpful. Is there anything else you've noticed or anything else you think I should know about your symptoms?"
+                },
+                {
+                    "input": "Patient: Yes, I have also noticed that my appetite has decreased and I have been experiencing night sweats. Additionally, I have been feeling quite weak and have had difficulty concentrating.",
+                    "response": "Provider: I understand that along with the other symptoms, you've also been experiencing decreased appetite, night sweats, weakness, and difficulty concentrating. These are all important details. I'm going to make sure all this information is documented in your patient record. It's important that a healthcare provider reviews these symptoms with you. I will arrange an appointment for you with a provider as soon as possible. Thank you for reaching out and sharing this information."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "The patient, a 60-year-old female, has been experiencing a severe fever for the past 4 weeks, which spikes in the evenings and decreases in the mornings. Accompanying symptoms include chills, body aches, fatigue, decreased appetite, night sweats, weakness, and difficulty concentrating.",
+            "SOAP": {
+                "Subjective": "Patient reports a 4-week history of severe fever that spikes in the evenings and decreases in the mornings. She also experiences chills, body aches, fatigue, decreased appetite, night sweats, weakness, and difficulty concentrating.",
+                "Objective": "Patient is a 60-year-old female. Further physical examination and diagnostic tests are needed.",
+                "Assessment": "The patient's symptoms suggest a possible systemic infection or other serious condition. Differential diagnoses could include tuberculosis, endocarditis, or malignancy.",
+                "Plan": "Refer the patient to a healthcare provider for further evaluation and diagnostic tests. Possible billing codes include R50.9 (Fever, unspecified), R53.83 (Other fatigue), and R63.0 (Anorexia)."
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "IMP",
+                    "display": "inpatient encounter"
+                },
+                "subject": {
+                    "reference": "Patient/pid_10"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:00:00Z"
+                },
+                "reason": [
+                    {
+                        "text": "Patient reports a 4-week history of severe fever and associated symptoms."
+                    }
+                ]
+            },
+            "proposal": "Refer to a relevant specialist",
+            "justification": "Given the severity and duration of the patient's symptoms, as well as the potential for serious underlying conditions, a referral to a specialist is necessary for further evaluation and diagnosis."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'period', and 'reason'.",
+        "proposal_eval": {
+            "original_proposal": "Refer to a relevant specialist",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently preferred ordering specific lab tests over referring to a specialist, as seen in the validation history."
+        },
+        "validation": {
+            "summary": "The patient, a 60-year-old female, has been experiencing a severe fever for the past 4 weeks, which spikes in the evenings and decreases in the mornings. Accompanying symptoms include chills, body aches, fatigue, decreased appetite, night sweats, weakness, and difficulty concentrating.",
+            "old_proposal": "Refer to a relevant specialist",
+            "proposal_accepted": 0,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms and the potential for serious underlying conditions, it is necessary to order specific lab tests for further evaluation and diagnosis. These tests can help identify the cause of the fever and other symptoms, which could include systemic infection, tuberculosis, endocarditis, or malignancy."
+        }
+    },
+    "46": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_6. I'm calling because I've been experiencing nausea for the past 4 weeks and I wanted to discuss it with you.",
+                    "response": "Provider: Hello, I understand you're feeling unwell. I see here that you're a 75-year-old female with a history of diabetes and you've been experiencing nausea for the past 4 weeks. I'm here to listen and gather information about your symptoms. Can you tell me more about the nausea? For example, is it constant or does it come and go? Are there any specific times of the day when it's worse?"
+                },
+                {
+                    "input": "Patient: The nausea comes and goes throughout the day. It's not constant, but it does happen multiple times a day. I haven't noticed any specific times when it's worse, it seems to be fairly consistent throughout the day.",
+                    "response": "Provider: I see, thank you for sharing that information. So, you're experiencing nausea that comes and goes multiple times a day, and it seems to be fairly consistent throughout the day. This is important information that will help your healthcare team understand what you're going through. Is there anything else you've noticed or any other symptoms you've been experiencing?"
+                },
+                {
+                    "input": "Patient: Yes, along with the nausea, I've also been feeling a bit lightheaded at times. I've also noticed a decrease in appetite and occasional stomach discomfort.",
+                    "response": "Provider: I appreciate you sharing these additional symptoms. So, along with the nausea, you've been feeling lightheaded at times, noticed a decrease in appetite, and have occasional stomach discomfort. This information is very helpful. I will make sure to document all these details and schedule an appointment for you with a healthcare provider who can further evaluate your symptoms."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "A 75-year-old female patient with a history of diabetes reported experiencing nausea for the past 4 weeks. The patient also reported feeling lightheaded at times, a decrease in appetite, and occasional stomach discomfort.",
+            "SOAP": {
+                "Subjective": "Patient reports nausea that comes and goes multiple times a day for the past 4 weeks. She also experiences occasional lightheadedness, decreased appetite, and stomach discomfort.",
+                "Objective": "Patient is a 75-year-old female with a history of diabetes.",
+                "Assessment": "The patient's symptoms may indicate a gastrointestinal issue, possibly related to her diabetes. Further evaluation is needed.",
+                "Plan": "Schedule an appointment with a healthcare provider for further evaluation of symptoms. Consider ordering lab tests to check blood glucose levels and other relevant parameters.",
+                "Billing codes": [
+                    "R11.0 - Nausea",
+                    "R42 - Dizziness and giddiness",
+                    "R63.0 - Anorexia",
+                    "R10.84 - Generalized abdominal pain"
+                ]
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_6"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_id"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:30:00Z"
+                },
+                "reason": [
+                    {
+                        "text": "Nausea, lightheadedness, decreased appetite, and stomach discomfort"
+                    }
+                ]
+            },
+            "proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms and history of diabetes, specific lab tests are necessary to evaluate her blood glucose levels and other relevant parameters."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. It correctly follows the structure of an Encounter resource, including required fields such as 'resourceType', 'status', and 'subject', and optional fields such as 'class', 'participant', 'period', and 'reason'.",
+        "proposal_eval": {
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently accepted the proposal to order specific lab tests, especially in cases with similar symptoms."
+        },
+        "validation": {
+            "summary": "A 75-year-old female patient with a history of diabetes reported experiencing nausea for the past 4 weeks. The patient also reported feeling lightheaded at times, a decrease in appetite, and occasional stomach discomfort.",
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms and history of diabetes, specific lab tests are necessary to evaluate her blood glucose levels and other relevant parameters."
+        }
+    },
+    "47": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_8. I'm calling because I've been experiencing nausea for the past hour and I wanted to seek medical advice.",
+                    "response": "Provider: Hello, I understand you're feeling unwell with nausea. I see from your records that you're an 80-year-old female with a history of Rheumatoid arthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about the nausea? For example, did it come on suddenly or gradually? Are there any other symptoms accompanying the nausea?"
+                },
+                {
+                    "input": "Patient: The nausea came on suddenly about an hour ago. As for other symptoms, I haven't noticed anything else accompanying the nausea. It's just been the feeling of queasiness in my stomach.",
+                    "response": "Provider: I see, thank you for sharing that information. So, to summarize, you're an 80-year-old female with a history of Rheumatoid arthritis, and you've been experiencing sudden nausea for about an hour now, with no other symptoms. I'm here to help you, and your information is very important."
+                },
+                {
+                    "input": "Patient: Yes, that's correct. I appreciate your help and understanding.",
+                    "response": "Provider: I'm glad to be of assistance. Your well-being is our priority. Based on the information you've provided, I will schedule an appointment for you with a healthcare provider who can further evaluate your symptoms. Thank you for reaching out and take care."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "An 80-year-old female patient with a history of Rheumatoid arthritis reported sudden onset of nausea lasting for about an hour with no other accompanying symptoms. The healthcare provider scheduled an appointment for further evaluation of her symptoms.",
+            "SOAP": {
+                "Subjective": "Patient reports sudden onset of nausea lasting for about an hour. No other symptoms reported. Patient has a history of Rheumatoid arthritis.",
+                "Objective": "Patient is an 80-year-old female. No physical examination or lab tests were performed during the conversation.",
+                "Assessment": "Sudden onset of nausea in an 80-year-old female with a history of Rheumatoid arthritis. No other symptoms reported.",
+                "Plan": "Schedule an appointment for further evaluation of symptoms. No medications prescribed at this time.",
+                "Billing codes": "R11.0 (Nausea), M06.9 (Rheumatoid arthritis, unspecified)"
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_8"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_id"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:00:00Z"
+                },
+                "reasonCode": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "422587007",
+                                "display": "Nausea (finding)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposal": "Order specific lab tests",
+            "justification": "Given the patient's age and sudden onset of nausea, it is necessary to order specific lab tests to rule out any underlying conditions that may be causing the symptom."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'period', and 'reasonCode'.",
+        "proposal_eval": {
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently accepted the proposal to order specific lab tests in similar cases."
+        },
+        "validation": {
+            "summary": "An 80-year-old female patient with a history of Rheumatoid arthritis reported sudden onset of nausea lasting for about an hour with no other accompanying symptoms. The healthcare provider scheduled an appointment for further evaluation of her symptoms.",
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's age and sudden onset of nausea, it is necessary to order specific lab tests to rule out any underlying conditions that may be causing the symptom."
+        }
+    },
+    "48": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_3. I'm calling because I've been experiencing nausea for the past 2 days and I wanted to discuss it with you.",
+                    "response": "Provider: Hello, I understand you're feeling unwell. I see here that you're a 30-year-old male with the patient ID pid_3. You've mentioned that you've been experiencing nausea for the past 2 days. I'm here to listen and gather information about your symptoms. Can you tell me more about your symptoms? Are there any other symptoms accompanying the nausea?"
+                },
+                {
+                    "input": "Patient: Thank you for understanding. Along with the nausea, I haven't noticed any other symptoms. It's just been the feeling of queasiness and occasional stomach discomfort.",
+                    "response": "Provider: I see, thank you for sharing that information. So, to summarize, you're a 30-year-old male, patient ID pid_3, and for the past 2 days, you've been experiencing nausea along with occasional stomach discomfort, but no other symptoms. I'm here to help you, and your information is crucial in understanding what's going on."
+                },
+                {
+                    "input": "Patient: Yes, that's correct. I appreciate your help in understanding what might be causing my symptoms.",
+                    "response": "Provider: I appreciate your patience and cooperation. It's important to discuss these symptoms with a healthcare provider who can provide a thorough evaluation. I will arrange an appointment for you with a provider as soon as possible. They will be able to discuss your symptoms in more detail and help determine the best course of action. Thank you for reaching out and take care."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "A 30-year-old male patient, identified as pid_3, reported experiencing nausea and occasional stomach discomfort for the past 2 days. The healthcare provider acknowledged the symptoms and assured the patient of arranging an appointment for a thorough evaluation.",
+            "SOAP": {
+                "Subjective": "Patient pid_3, a 30-year-old male, reports experiencing nausea and occasional stomach discomfort for the past 2 days. No other symptoms have been noticed.",
+                "Objective": "No physical examination or diagnostic tests were performed during this conversation.",
+                "Assessment": "The patient's symptoms suggest a possible gastrointestinal issue. Further evaluation is needed to confirm the diagnosis.",
+                "Plan": "The provider plans to arrange an appointment for the patient for a thorough evaluation of his symptoms.",
+                "Billing_Code": "R11.0 (Nausea)"
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_3"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider_id"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:00:00Z"
+                },
+                "reason": [
+                    {
+                        "text": "Nausea and occasional stomach discomfort"
+                    }
+                ]
+            },
+            "proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms of nausea and stomach discomfort, ordering specific lab tests would help in diagnosing the underlying cause and determining the appropriate treatment."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'period', and 'reason'.",
+        "proposal_eval": {
+            "original_proposal": "Order specific lab tests",
+            "new_proposal": "Order specific lab tests",
+            "justification": "The medical professional has consistently accepted the proposal to order specific lab tests, especially in cases with similar symptoms."
+        },
+        "validation": {
+            "summary": "A 30-year-old male patient, identified as pid_3, reported experiencing nausea and occasional stomach discomfort for the past 2 days. The healthcare provider acknowledged the symptoms and assured the patient of arranging an appointment for a thorough evaluation.",
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's symptoms of nausea and stomach discomfort, ordering specific lab tests would help in diagnosing the underlying cause and determining the appropriate treatment."
+        }
+    },
+    "49": {
+        "base_conversation": {
+            "base_conversation": [
+                {
+                    "input": "Patient: Hi, my patient ID is pid_8. I'm calling because I've been experiencing shortness of breath for the past hour and it's been moderate in severity.",
+                    "response": "Provider: Hello, I understand you're experiencing shortness of breath for the past hour and it's been moderate in severity. I see from your records that you're an 80-year-old female with a history of Rheumatoid arthritis. I'm here to listen and gather information about your symptoms. Can you tell me more about this shortness of breath? Have you experienced anything like this before?"
+                },
+                {
+                    "input": "Patient: Yes, I have experienced shortness of breath before, but not to this extent. It feels like I can't catch my breath and I have to take deep breaths to feel somewhat relieved. It's been happening more frequently lately.",
+                    "response": "Provider: I see, it sounds like you're having a tough time. You mentioned that you've experienced shortness of breath before, but it's more severe now and has been happening more frequently. It's important to note these changes. Can you share if there are any specific triggers or activities that seem to make it worse? Also, have you noticed any other symptoms accompanying this shortness of breath?"
+                },
+                {
+                    "input": "Patient: Yes, I have noticed that physical exertion or any kind of activity that requires more effort tends to make the shortness of breath worse. Additionally, I have been feeling a bit fatigued and lightheaded along with the shortness of breath.",
+                    "response": "Provider: I understand that physical exertion seems to exacerbate your shortness of breath and you've also been feeling fatigued and lightheaded. These details are very helpful. It's important that we get you in to see a provider who can evaluate your symptoms further. I will arrange an appointment for you. Please remember to share all these details during your visit. Take care and rest as much as you can until your appointment."
+                }
+            ]
+        },
+        "proposals": {
+            "summary": "80-year-old female patient with a history of Rheumatoid arthritis reported experiencing moderate shortness of breath for the past hour, which has been occurring more frequently and severely than before. The patient also reported feeling fatigued and lightheaded, with physical exertion exacerbating the shortness of breath.",
+            "SOAP": {
+                "Subjective": "Patient reports moderate shortness of breath for the past hour, which has been more frequent and severe than previous episodes. Patient also reports feeling fatigued and lightheaded, with physical exertion exacerbating the symptoms.",
+                "Objective": "Patient is an 80-year-old female with a history of Rheumatoid arthritis.",
+                "Assessment": "The patient's symptoms may indicate a possible cardiac or respiratory issue. Further evaluation is needed.",
+                "Plan": "Arrange an appointment for the patient to see a provider for further evaluation. The patient is advised to rest and avoid physical exertion until the appointment.",
+                "Billing codes": [
+                    "R06.02 - Shortness of breath",
+                    "M06.9 - Rheumatoid arthritis, unspecified",
+                    "R53.83 - Other fatigue"
+                ]
+            },
+            "HL7FHIR": {
+                "resourceType": "Encounter",
+                "status": "finished",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/pid_8"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/provider"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2022-01-01T00:00:00Z",
+                    "end": "2022-01-01T00:30:00Z"
+                },
+                "reasonCode": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "267036007",
+                                "display": "Shortness of breath"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposal": "Order specific lab tests",
+            "justification": "Given the patient's age, history of Rheumatoid arthritis, and recent increase in severity and frequency of shortness of breath, it is necessary to order specific lab tests to rule out any underlying cardiac or respiratory conditions."
+        },
+        "fhir_eval": "The provided HL7 FHIR JSON document appears to be in the correct format and does not contain any obvious errors. The structure adheres to the FHIR standard for an Encounter resource, with appropriate use of fields such as 'resourceType', 'status', 'class', 'subject', 'participant', 'period', and 'reasonCode'.",
+        "proposal_eval": {
+            "evaluation": "not enough data to conduct evaluation"
+        },
+        "validation": {
+            "summary": "80-year-old female patient with a history of Rheumatoid arthritis reported experiencing moderate shortness of breath for the past hour, which has been occurring more frequently and severely than before. The patient also reported feeling fatigued and lightheaded, with physical exertion exacerbating the shortness of breath.",
+            "old_proposal": "Order specific lab tests",
+            "proposal_accepted": 1,
+            "validator_proposal": "Order specific lab tests",
+            "justification": "Given the patient's age, history of Rheumatoid arthritis, and recent increase in severity and frequency of shortness of breath, it is necessary to order specific lab tests to rule out any underlying cardiac or respiratory conditions."
         }
     }
 }
