@@ -1,5 +1,6 @@
 from termcolor import colored
 import json 
+import random
 from utils import *
 import guidance
 
@@ -17,10 +18,8 @@ base_conversations = load_conversations()
 val_pth, iter_pth, validation_history, iteration_results, left = load_iteration_data()
 
 # Loop n times
-n = 50
-indices = [10, 20, 39, 49]
-#for iteration in range(left,left+n):
-for iteration in indices:
+n = 30
+for iteration in range(left,left+n):
     try:
         print(colored('Starting iteration: ' + str(iteration), 'green'))
 
@@ -36,7 +35,8 @@ for iteration in indices:
         print(colored('Generating summaries and proposals', 'yellow'))
 
         # summarize conversation, propose action, and justification
-        proposal_agent = proposal_agent(options=careplan, base_conversation=base_conversation, llm=gpt(4))
+        option = random.choice(careplan)
+        proposal_agent = proposal_agent(option=option, base_conversation=base_conversation, llm=gpt(4))
         proposals = json.loads(proposal_agent['proposal'])
 
         print(colored('Evaluating HL7 FHIR document', 'yellow'))
@@ -59,13 +59,13 @@ for iteration in indices:
         print(colored('Validating output', 'yellow'))
 
         # validator agent
-        validator_agent = validator_agent(options=careplan_preferred, proposal=proposals, llm=gpt(4))
+        validator_agent = validator_agent(options=careplan_preferred, base_conversation=base_conversation, llm=gpt(4))
         proposal_val = json.loads(validator_agent['validation'])
 
         # condensed val history to feeback into evaluator
-        keys = ['proposal_accepted', 'new_proposal']
-        proposal_validation = {'old_proposal': proposals['proposal']}
-        proposal_validation.update({key: proposal_val[key] for key in keys})
+        keys = ['new_proposal']
+        proposal_validation = {'old_proposal': proposals['proposal'],'new_proposal': proposal_val['new_proposal']}
+
 
         # keep track of the validation history
         validation_history[str(iteration)] = {
@@ -93,3 +93,11 @@ for iteration in indices:
 # save iterations
 save_dict_to_json(validation_history, val_pth)
 save_dict_to_json(iteration_results, iter_pth)
+
+# extract proposals
+proposals_df = extract_proposals(iteration_results)
+
+# plot proposals
+plt = plot_proposals(proposals_df)
+plt.savefig('figures/proposal_counts.png')
+proposals_df.to_csv('data/proposal_counts.csv', index=False)

@@ -1,5 +1,7 @@
 import sqlite3
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 import random
 import json
 import os
@@ -202,7 +204,6 @@ def combine_proposals(dict1, dict2):
     new_dict = {
         'summary': dict1['summary'],
         'old_proposal': dict1['proposal'],
-        'proposal_accepted': dict2['proposal_accepted'],
         'validator_proposal': dict2['new_proposal'],
         'justification': dict2['justification']
     }
@@ -213,3 +214,53 @@ def save_dict_to_json(data, filename):
         json.dump(data, json_file, indent=4)
     print(f'Saved dictionary to {filename}')
 
+def extract_proposals(data):
+    original_proposals = []
+    eval_proposals = []
+    val_proposals = []
+    for key, value in data.items():
+
+        if key == '0':
+            continue
+
+        original_proposal = value['proposal_eval']['original_proposal']
+        eval_proposal = value['proposal_eval']['new_proposal']
+        val_proposal = value['validation']['validator_proposal']
+        original_proposals.append(original_proposal)
+        eval_proposals.append(eval_proposal)
+        val_proposals.append(val_proposal)
+
+    df = pd.DataFrame(
+        {
+            'original_proposal': original_proposals,
+            'eval_proposal': eval_proposals,
+            'val_proposal': val_proposals
+        },
+        index=list(data.keys())[:-1]
+    )
+
+    # Calculate the cumulative count of matches for "original_proposal"
+    df['original_count'] = (df['original_proposal'] == df['val_proposal']).cumsum()
+
+    # Calculate the cumulative count of matches for "eval_proposal"
+    df['eval_count'] = (df['eval_proposal'] == df['val_proposal']).cumsum()
+
+    return(df)
+
+def plot_proposals(df):
+
+    # plot data
+    plot_df = df[['original_count', 'eval_count']].copy()
+    plot_df.loc[:, 'iteration'] = plot_df.reset_index().index + 1
+    plot_df_melted = plot_df.melt('iteration', var_name='line', value_name='y')
+
+    sns.set_style("whitegrid")
+    plt.figure(figsize=(10, 6))
+    sns.set(font_scale=1.5)
+    sns.lineplot(data=plot_df_melted, x='iteration', y='y', hue='line', errorbar=None)
+    plt.xlabel('Number of Iterations')
+    plt.ylabel('Cumulative Count')
+    plt.title('Cumulative Count of Agreement between proposals')
+    plt.legend(labels=['Agreement with original proposal', 'Agreement with evaluated proposal'])
+
+    return plt

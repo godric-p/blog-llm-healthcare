@@ -1,0 +1,47 @@
+original_proposal,eval_proposal,val_proposal,original_count,eval_count
+Order specific lab tests,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",0,1
+Prescribe specific therapy (such as respiratory or occupational),Order specific lab tests,Order imaging tests,0,1
+Suggest dietary changes,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",0,2
+Suggest dietary changes,Arrange for mental health counseling,Arrange for mental health counseling,0,3
+Provide self-care instructions,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",0,4
+Involve social services,Order specific lab tests,Order specific lab tests,0,5
+Advise hospital admission,Order specific lab tests,Order specific lab tests,0,6
+Order specific lab tests,Refer to a relevant specialist,Order specific lab tests,1,6
+Suggest dietary changes,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",1,7
+Recommend lifestyle modifications,Order specific lab tests,Order specific lab tests,1,8
+Arrange for mental health counseling,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",1,9
+Prescribe appropriate medication,Order specific lab tests,Order specific lab tests,1,10
+Order imaging tests,Order specific lab tests,Order specific lab tests,1,11
+Involve social services,Order specific lab tests,Order imaging tests,1,11
+Suggest dietary changes,Order specific lab tests,Order specific lab tests,1,12
+Involve social services,Order specific lab tests,Order specific lab tests,1,13
+Arrange for mental health counseling,Order specific lab tests,Order specific lab tests,1,14
+Provide self-care instructions,Order specific lab tests,Order specific lab tests,1,15
+Recommend lifestyle modifications,"Order specific diagnostics (like ECG, lung function tests etc.)",Arrange for mental health counseling,1,15
+Prescribe specific therapy (such as respiratory or occupational),Arrange for mental health counseling,Arrange for mental health counseling,1,16
+Involve social services,Order specific lab tests,Order specific lab tests,1,17
+Recommend stress management techniques,Order specific lab tests,Order specific lab tests,1,18
+Involve social services,Order specific lab tests,Order specific lab tests,1,19
+Refer to a relevant specialist,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",1,20
+Provide self-care instructions,Order specific lab tests,Order specific lab tests,1,21
+"Order specific diagnostics (like ECG, lung function tests etc.)",Order specific lab tests,"Order specific diagnostics (like ECG, lung function tests etc.)",2,21
+Provide disease-specific counseling,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",2,22
+Provide disease-specific counseling,Order specific lab tests,Order specific lab tests,2,23
+Recommend over-the-counter medications,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",2,24
+Suggest dietary changes,Order specific lab tests,Order specific lab tests,2,25
+"Order specific diagnostics (like ECG, lung function tests etc.)",Order specific lab tests,Order imaging tests,2,25
+Refer to a relevant specialist,Order specific lab tests,Order specific lab tests,2,26
+Recommend stress management techniques,Order specific lab tests,Order specific lab tests,2,27
+Arrange for mental health counseling,Refer to a relevant specialist,Arrange for mental health counseling,3,27
+Refer to a relevant specialist,Arrange for mental health counseling,Arrange for mental health counseling,3,28
+Order imaging tests,Arrange for mental health counseling,Arrange for mental health counseling,3,29
+Prescribe specific therapy (such as respiratory or occupational),Order specific lab tests,Order specific lab tests,3,30
+Advise hospital admission,Arrange for mental health counseling,Arrange for mental health counseling,3,31
+Order specific lab tests,Recommend lifestyle modifications,Arrange for mental health counseling,3,31
+Prescribe specific therapy (such as respiratory or occupational),Order specific lab tests,Order specific lab tests,3,32
+Suggest dietary changes,Order specific lab tests,Order specific lab tests,3,33
+Recommend stress management techniques,Order specific lab tests,Order specific lab tests,3,34
+Provide self-care instructions,Order specific lab tests,Order specific lab tests,3,35
+Order imaging tests,Order specific lab tests,Order specific lab tests,3,36
+Involve social services,Order specific lab tests,Order specific lab tests,3,37
+Recommend stress management techniques,"Order specific diagnostics (like ECG, lung function tests etc.)","Order specific diagnostics (like ECG, lung function tests etc.)",3,38

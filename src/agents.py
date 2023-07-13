@@ -106,10 +106,10 @@ Please read the following conversation and complete the following tasks. Provide
 form of a python dictionary where the output for each task is returned in separate element. The elements
 include (1) a two sentence summary, (2) a medical note based on the following conversation in the SOAP 
 format and include the relevant billing codes, (3) please also write a summary for the EHR in the HL7 FHIR 
-json format, (4) a single proposal derived from {{options}}, and (5) a 1 sentence justification where you think step by step to 
-justify why you selected the proposal. The keys for the python dictionary are "summary", "SOAP", "HL7FHIR", "proposal",
-and "justification". Base conversation: {{base_conversation}}. Use double quotes for all property names and values. Ensure
-that the last line ends with a double quote.
+json format, (4) a single proposal provided here: {{option}}. The keys for the python dictionary are "summary", 
+"SOAP", "HL7FHIR", and "proposal". Base conversation: {{base_conversation}}. Use double quotes 
+for all property names and values. Ensure that the last line ends with a double quote. Please return the
+proposal exactly as it is provided as in {{option}} and do not add additional text.
 {{~/user}}
                                            
 {{~! Generate the proposal}}
@@ -144,15 +144,16 @@ you are the assistant of a medical proffesional
 You will receive a summary of a recent conversation between a provider and a patient along with a follow
 up proposal made by a base agent. The base agent proposal you will be evaluating is here: {{proposal}}. 
 You will review the summary, the proposal, and a record of "validation histories" here: {{val_history}}, which 
-indicates whether or not a given proposal was accepted by the medical proffesional you support. A 1 for 
-'proposal_accepted' field in 'validation_history' indicates that the original proposal was accepted. 
-A 0 for 'proposal_accepted' indicates that the original proposal was rejected. Please use this information to 
+indicates the chosen proposal made by the medical proffesional you support. Please use this information to 
 discern the preferences of the medical proffesional and generate proposals that are likely to be accepted by the 
 medical proffesional. 
 
 Return only a python dictionary with a key for "original_proposal", "new_proposal", and "justification",
 where the justification field is a one sentence explanation for why you think the medical proffesional would prefer
-the new proposal vs the old proposal made by the proposal agent. The new proposal must come from {{careplan}}. 
+the new proposal vs the old proposal made by the proposal agent. Please think step by step for the justification.
+
+The new proposal must come from {{careplan}}. 
+
 If a new proposal is selected, please select only a single new proposal. It is important that you only return
 the python dictionary and use double quotes for all property names in the python dictionary. Do not return text that
 is additional to the python dictionary. 
@@ -163,25 +164,21 @@ is additional to the python dictionary.
 {{gen 'evaluation'}}
 {{~/assistant}}''')
                            
-# "human" in the loop validator agent. Yes its ironic to use an ai agent to represent the human :-)
+# "human" in the loop validator agent.
 validator_agent = guidance('''
 {{#system~}}
-you are a role playing agent that is playing the role of a doctor reviewing proposals and deciding
-whether or not the proposal aligns with your evaluation
+you are a role playing agent that is playing the role of a medical proffesional reviewing conversations between 
+patients and a provider, and making a recommendation. 
 {{~/system}}
                                            
 {{#user~}}
-Please consider the summary, justification, and proposal in this document: {{proposal}}. You are operating
-in certain constraints that restricts the actions you can take to the following actions {{options}}. Please
-determine if the "proposal" in the provided document is an action you can take, and if not, please provide a single 
-alternative action from the list provided above. Please provide your output as a python dictionary where the output
-contains an element for (1) "proposal_accepted", (2) "new_proposal", and (3) "justification". The "proposal_accepted" 
-field should contain a 1 if the proposal was accepted and a 0 if the proposal was rejected. The "new proposal" field
-should should contain the new proposal if the "accepted_proposal" field is 0 and the provided proposal if the 
-"accepted field" is 0. The "justification" field should contain the clinical justification for the new 
-proposal if the "accepted_proposal" is 0. The justification field should not mention that you are selecting proposals 
-from a pre-defined list or that you are restricted to certain proposals. remember to return a valid python dictionary.
-Use double quotes for properties/keys and values. Reminder: only return a single proposal from the list.
+Consider the following conversation between a patient and a healthcare worker: {{base_conversation}}. You are operating
+in certain constraints that restricts the actions you can take to the following actions {{options}}. Please provide your 
+output as a python dictionary where the output contains an element for (1) "new_proposal" and (2) "justification". 
+The "justification" field should contain a step by step clinical justification for the new proposal. The justification field 
+should not mention that you are selecting proposals from a pre-defined list or that you are restricted to certain proposals. 
+Remember to return a valid python dictionary. Use double quotes for properties/keys and values. 
+Reminder: only return a single proposal from the list.
 {{~/user}}
                                            
 {{~! Generate the validation}}

@@ -1,338 +1,284 @@
 {
     "0": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
             "new_proposal": "Order specific lab tests"
-        }
-    },
-    "1": {
-        "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
-            "new_proposal": "Order imaging tests"
         }
     },
     "2": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Order specific lab tests",
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "3": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
-            "new_proposal": "Order specific lab tests"
+            "old_proposal": "Prescribe specific therapy (such as respiratory or occupational)",
+            "new_proposal": "Order imaging tests"
         }
     },
-    "5": {
+    "4": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
-            "new_proposal": "Order specific lab tests"
+            "old_proposal": "Suggest dietary changes",
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "6": {
         "val_history": {
-            "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
+            "old_proposal": "Suggest dietary changes",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "7": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
-            "new_proposal": "Order specific lab tests"
+            "old_proposal": "Provide self-care instructions",
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "8": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Involve social services",
             "new_proposal": "Order specific lab tests"
         }
     },
     "9": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Advise hospital admission",
             "new_proposal": "Order specific lab tests"
         }
     },
     "10": {
         "val_history": {
             "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
             "new_proposal": "Order specific lab tests"
         }
     },
     "11": {
         "val_history": {
-            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
-            "proposal_accepted": 1,
+            "old_proposal": "Suggest dietary changes",
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "12": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Recommend lifestyle modifications",
             "new_proposal": "Order specific lab tests"
         }
     },
     "13": {
         "val_history": {
-            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
-            "proposal_accepted": 1,
+            "old_proposal": "Arrange for mental health counseling",
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "14": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Prescribe appropriate medication",
             "new_proposal": "Order specific lab tests"
         }
     },
     "15": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Order imaging tests",
             "new_proposal": "Order specific lab tests"
         }
     },
     "16": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
-            "new_proposal": "Order specific lab tests"
+            "old_proposal": "Involve social services",
+            "new_proposal": "Order imaging tests"
         }
     },
     "17": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Suggest dietary changes",
             "new_proposal": "Order specific lab tests"
         }
     },
     "18": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Involve social services",
             "new_proposal": "Order specific lab tests"
         }
     },
     "19": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Arrange for mental health counseling",
             "new_proposal": "Order specific lab tests"
         }
     },
     "20": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Provide self-care instructions",
             "new_proposal": "Order specific lab tests"
         }
     },
     "21": {
         "val_history": {
-            "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
+            "old_proposal": "Recommend lifestyle modifications",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "22": {
         "val_history": {
-            "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
+            "old_proposal": "Prescribe specific therapy (such as respiratory or occupational)",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "23": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Involve social services",
             "new_proposal": "Order specific lab tests"
         }
     },
     "24": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Recommend stress management techniques",
             "new_proposal": "Order specific lab tests"
         }
     },
     "25": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Involve social services",
             "new_proposal": "Order specific lab tests"
         }
     },
     "26": {
         "val_history": {
-            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
-            "proposal_accepted": 1,
+            "old_proposal": "Refer to a relevant specialist",
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "27": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Provide self-care instructions",
             "new_proposal": "Order specific lab tests"
         }
     },
     "28": {
         "val_history": {
             "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
-            "proposal_accepted": 1,
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "29": {
         "val_history": {
-            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
-            "proposal_accepted": 1,
+            "old_proposal": "Provide disease-specific counseling",
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     },
     "30": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Provide disease-specific counseling",
             "new_proposal": "Order specific lab tests"
         }
     },
     "31": {
         "val_history": {
-            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
-            "proposal_accepted": 1,
+            "old_proposal": "Recommend over-the-counter medications",
             "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
+        }
+    },
+    "32": {
+        "val_history": {
+            "old_proposal": "Suggest dietary changes",
+            "new_proposal": "Order specific lab tests"
         }
     },
     "33": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)",
             "new_proposal": "Order imaging tests"
-        }
-    },
-    "34": {
-        "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
-            "new_proposal": "Order specific lab tests"
         }
     },
     "35": {
         "val_history": {
-            "old_proposal": "Recommend lifestyle modifications",
-            "proposal_accepted": 0,
-            "new_proposal": "Provide disease-specific counseling"
+            "old_proposal": "Refer to a relevant specialist",
+            "new_proposal": "Order specific lab tests"
         }
     },
     "36": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Recommend stress management techniques",
             "new_proposal": "Order specific lab tests"
         }
     },
     "37": {
         "val_history": {
             "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "38": {
         "val_history": {
-            "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
+            "old_proposal": "Refer to a relevant specialist",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "39": {
         "val_history": {
-            "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
+            "old_proposal": "Order imaging tests",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "40": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Prescribe specific therapy (such as respiratory or occupational)",
             "new_proposal": "Order specific lab tests"
         }
     },
     "41": {
         "val_history": {
-            "old_proposal": "Arrange for mental health counseling",
-            "proposal_accepted": 1,
+            "old_proposal": "Advise hospital admission",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "42": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Order specific lab tests",
             "new_proposal": "Arrange for mental health counseling"
         }
     },
     "43": {
         "val_history": {
-            "old_proposal": "Arrange for an in-person evaluation as soon as possible.",
-            "proposal_accepted": 0,
+            "old_proposal": "Prescribe specific therapy (such as respiratory or occupational)",
             "new_proposal": "Order specific lab tests"
         }
     },
     "44": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Suggest dietary changes",
             "new_proposal": "Order specific lab tests"
         }
     },
     "45": {
         "val_history": {
-            "old_proposal": "Refer to a relevant specialist",
-            "proposal_accepted": 0,
+            "old_proposal": "Recommend stress management techniques",
             "new_proposal": "Order specific lab tests"
         }
     },
     "46": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Provide self-care instructions",
             "new_proposal": "Order specific lab tests"
         }
     },
     "47": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Order imaging tests",
             "new_proposal": "Order specific lab tests"
         }
     },
     "48": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
+            "old_proposal": "Involve social services",
             "new_proposal": "Order specific lab tests"
         }
     },
     "49": {
         "val_history": {
-            "old_proposal": "Order specific lab tests",
-            "proposal_accepted": 1,
-            "new_proposal": "Order specific lab tests"
+            "old_proposal": "Recommend stress management techniques",
+            "new_proposal": "Order specific diagnostics (like ECG, lung function tests etc.)"
         }
     }
 }

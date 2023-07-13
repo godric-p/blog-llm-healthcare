@@ -21,9 +21,10 @@ else:
     left = 0
 
 # Calculate the right side of the range
-right = left + 10
+n = 20
+right = left + n
 
-# Loop 100 times
+# Loop n times
 for iteration in range(left,right):
     try:
         print(colored('Starting iteration: ' + str(iteration), 'green'))
