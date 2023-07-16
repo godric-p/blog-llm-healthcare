@@ -79,7 +79,7 @@ Ok, I will follow these instructions and role play as a healthcare provider spea
 {{~#geneach 'conversation' stop=False}}
 {{#user~}}
 User: {{set 'this.input' (await 'input')}}
-Comment: Remember, answer as a healthcare provider. lease incorporate additional patient information
+Comment: Remember, answer as a healthcare provider. Please incorporate additional patient information
 when it is provided as an additional input: {{patient_info}} by repeating a sumnmary of the information 
 back to the patient. Remember not to provide suggested treatments. Start your utterance with Provider:
 {{#if (== last_response 1)}}
